@@ -1,0 +1,14 @@
+VAR_CONFIG
+	::Program:Drive.state AT %IW."8I64xxxxxxx.00x-1".ETAD_Input;
+	::Program:Drive.command AT %QW."8I64xxxxxxx.00x-1".CMDD_Output;
+	::Program:Drive.speed AT %QW."8I64xxxxxxx.00x-1".LFRD_Output;
+	::Program:Door.direction AT %IX."X20DI9371".DigitalInput01;
+	::Program:Door.sw1 AT %IX."X20DI9371".DigitalInput02;
+	::Program:Door.sw2 AT %IX."X20DI9371".DigitalInput03;
+	::Program:Door.sw3 AT %IX."X20DI9371".DigitalInput04;
+	::Program:Door.sw4 AT %IX."X20DI9371".DigitalInput05;
+	::Program:Led.led1 AT %QX."X20DO9322".DigitalOutput02;
+	::Program:Led.led2 AT %QX."X20DO9322".DigitalOutput03;
+	::Program:Led.led3 AT %QX."X20DO9322".DigitalOutput04;
+	::Program:Led.led4 AT %QX."X20DO9322".DigitalOutput05;
+END_VAR

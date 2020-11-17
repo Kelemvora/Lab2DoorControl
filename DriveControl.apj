@@ -8,6 +8,6 @@
   <Project StoreRuntimeInProject="false" />
   <Variables DefaultInitValue="0" DefaultRetain="false" DefaultVolatile="false" />
   <TechnologyPackages>
-    <Acp10Arnc0 Version="5.11.1" />
+    <Acp10Arnc0 Version="5.2.1" />
   </TechnologyPackages>
 </Project>

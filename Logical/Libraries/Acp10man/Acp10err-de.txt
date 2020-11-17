@@ -74,12 +74,11 @@
  1027: Funktion ist für diese Hardware nicht verfügbar
  1028: Maximale Anzahl von Netzwerk-Kopplungen überschritten
  1029: Parameter schreiben nicht erlaubt: Abbruch-Rampe aktiv
- 1030: Funktion ist bei ACOPOS Simulation nur im Modus 'Complete' verfügbar
+ 1030: Funktion ist bei ACP10SIM nur im Simulationsmodus 'Complete' verfügbar
  1031: Lageregler Zykluszeit überschritten - CPU Auslastung zu hoch
  1032: Internal bus error
        Info(UDINT): Error code
  1034: Wert des Parameters in Verbindung mit Motorgebergetriebe nicht erlaubt
- 1035: Parameter schreiben bei aktivem Geber nicht erlaubt.
  2001: Upload der Trace-Daten nicht erlaubt: Aufzeichnung aktiv 
  2003: Trace-Start nicht erlaubt: Aufzeichnung aktiv
  2006: Initialisierung der Trace-Parameter nicht erlaubt: Aufzeichnung aktiv
@@ -97,7 +96,6 @@
  4015: Fehler durch Kommando ausgelöst
        Info(UINT): Kommando-Parameter
  4016: Taskklassen-Zykluszeit ungültig
- 4017: Netzwerk-Zykluszeit ungültig
  5001: Zielposition überschreitet positive SW-Endlage
  5002: Zielposition überschreitet negative SW-Endlage
  5003: Positive SW-Endlage erreicht
@@ -133,7 +131,6 @@
        Info(UINT): Detail
  5039: Funktion nicht möglich: Geberfehler
  5043: Referenzieren nicht möglich: Kompensation aktiv
- 5044: Referenzier-Modus nicht möglich: Richtungsumkehr erforderlich
  5101: Ausgleichsgetriebe: Grenzwerte überschritten
        Info(USINT): Zustands-Index
  5102: Zu viele Kurvenwechsel pro Zyklus (Masterperiode zu kurz)
@@ -165,7 +162,7 @@
  6017: Software: Watchdog aktiv
  6018: Hardware: Ausfall der internen Spannungsversorgung
  6019: ACOPOS: Überstrom
- 6020: Steuerversorgung: Unterspannung
+ 6020: 24 VDC Versorgung: Unterspannung
  6021: Low-Pegel am Reglerfreigabe-Eingang
  6023: Spannungseinbruch am Reglerfreigabe-Eingang
  6026: Haltebremse: Beim Öffnen Statorstromgrenze überschritten
@@ -216,7 +213,7 @@
        Info(UINT): Initialisierungnummer
  6066: Indexüberlauf beim Initilialisieren von Matrizen
        Info(UINT): Indexüberlauf
- 6067: Fehler bei der Initialisierung des dynamischen Systems
+ 6067: Fehler beim Initialisieren des dynamischen Systems
        Info(UINT): Fehlercode
  6068: Parameter schreiben bei aktivem Bremsentest nicht erlaubt
        Info(UINT): Fehlercode
@@ -227,12 +224,9 @@
  6072: Haltebremse: Überspannung
  6073: Reglerzusatzfunktion im Fehlerzustand
        Info(UINT): Fehlerstatus
- 6074: Steuerversorgung: Überspannung
+ 6074: 24 VDC Versorgung: Überspannung
        Info(REAL): Grenzwert
  6075: Initialisierung der Lastsimulation fehlgeschlagen
- 6076: Wechselrichter: Verdrahtung: Phasenreihenfolge nicht korrekt
- 7000: Geber: Fehler aktiv
-       Info(USINT): Geber
  7012: Geber: Hiperface Error Bit
        Info(USINT): Geber
  7013: Geber: Statusmeldung
@@ -289,7 +283,7 @@
        Info(USINT): Geber
  7052: Geber: Geber wird nicht unterstützt
        Info(USINT): Geber
- 7053: Geber: Spannungsversorgung fehlerhaft
+ 7053: Geber: Fehler in der Spannungsversorgung
        Info(USINT): Geber
  7054: Geber: Position im Kanal bereits definiert
        Info(USINT): Geber
@@ -338,7 +332,6 @@
  7077: Geber: Geberauswertung durch SafeMOTION Konfiguration blockiert
        Info(USINT): Geber
  7078: Geber: Intersegmentkommunikation ausgefallen
-       Info(USINT): Seite
  7079: Geber: Interner Fehler
        Info(UDINT): -
  7080: Geber: Fehler in der Geberkommunikation
@@ -347,31 +340,9 @@
        Info(USINT): Geber
  7082: Geber: Verbindung zum Geber gestört
        Info(USINT): Geber
- 7083: Referenzimpuls-Überwachung: Position, Auflösung od. Referenzimpuls fehlerhaft
-       Info(USINT): Geber
- 7084: Geber: Fehler in der Positionsauswertung
-       Info(USINT): Geber
- 7085: Geber: SafeMOTION nicht initialisiert
-       Info(USINT): Geber
- 7087: Geberemulation: Netzwerkverbindung unterbrochen
-       Info(USINT): Geber
- 7089: Geber: HIPERFACE DSL: Online Status: Bit 2: QMLW: Qualitätsüberwach. Low-Pegel
-       Info(USINT): Geber
- 7090: Geber: HIPERFACE DSL: Online Status: Bit 3: FIX0: Bit nicht '0'
-       Info(USINT): Geber
- 7091: Geber: HIPERFACE DSL: Online Status: Bit 8: PRST: Protokoll-Reset
-       Info(USINT): Geber
- 7092: Geber: HIPERFACE DSL: Online Status: Bit 9: DTE: Abweichungsschwellenfehler
-       Info(USINT): Geber
- 7093: Geber: HIPERFACE DSL: Online Status: Bit 12: FIX1: Bit nicht '1'
-       Info(USINT): Geber
- 7094: Geber: HIPERFACE DSL: Online Status: Bit 14: SUM: Sammelbyte Geber Status
-       Info(USINT): Geber
  7100: Parameterfunktion wird nicht unterstützt. (Einsteckkarte ?)
  7103: Inkompatible Schnittstelle
        Info(UDINT): Schnittstelle + Zusatzinfo
- 7104: Initialisierung abgebrochen
-       Info(USINT): Slot
  7200: Zwischenkreis: Überspannung
  7210: Zwischenkreis: Vorladen: Spannung instabil 
  7211: Zwischenkreis: Spannungseinbruch
@@ -395,29 +366,17 @@
  7223: Zwischenkreis: Überspannung DC-GND
  7224: Rückwandstecker: Kontaktüberwachung 24V-GND: Spannung zu klein
  7225: Zwischenkreis: Überspannung
-       Info(REAL): Grenzspannung
  7226: Zwischenkreis: Überstrom
  7227: Bremswiderstand: Überstrom
        Info(REAL): Grenzwert
  7228: Zwischenkreis: Nennspannungserkennung: Hoher Einschaltstrom
        Info(REAL): Spannungsanstiegsverhältnis
  7229: Chopper: Überstrom
- 7230: Zwischenkreis: Mittenspannung ausserhalb des erlaubten Bereichs 
-       Info(UDINT): Detail
- 7231: Motor: Überspannung
-       Info(REAL): Grenzspannung
- 7232: Netz: Detektierte Frequenz außerhalb des Bereichs [20,200]
-       Info(REAL): Detektierte Frequenz
+ 7230: Zwischenkreis: Bereichsverletzung an Messstelle 2 
  7300: Analog/Digital IO: Ungültige IO Konfiguration
        Info(USINT): Slot
  7303: Analog/Digital IO: 24V-Spannungsversorgung fehlerhaft
        Info(USINT): Slot
- 7304: Analog/Digital IO: Netzwerkverbindung unterbrochen
-       Info(USINT): Slot
- 7305: Digital IO: Digital Ausgang: Diagnosebit aktiv
-       Info(UINT): Digital IOs
- 7306: Analog IO: Analog Ausgang: Diagnosebit aktiv
-       Info(USINT): Analog IOs
  7401: Parameterposition überschreitet maximale Datenlänge
  7402: Bearbeitung der Parameter-Sequenz abgebrochen: Fehler beim Schreiben
        Info(UINT): Index des Parameters
@@ -438,9 +397,6 @@
  8013: EPROM: CRC Fehler
        Info(USINT): CODE
  8020: Ungültige Schaltfrequenz
- 8021: Anwender-Gerätekonfigurationsdaten: CRC Fehler
- 8022: Anwender-Gerätekonfigurationsdaten: Parameterwert ungültig
-       Info('PARID'): Parameter-ID
  9000: Kühler-Temperatursensor: Abbruchgrenze überschritten
        Info(REAL): Grenztemperatur
  9001: Kühler-Temperatursensor: Ausschaltgrenze überschritten
@@ -501,9 +457,9 @@
        Info(REAL): Temperatur
  9088: Leistungsteil: Temperatursensor 4: Ausschaltgrenze überschritten
        Info(REAL): Temperatur
- 9089: Geber-Temperatursensor: Abbruchgrenze überschritten
+ 9089: Motorgeber-Temperatursensor: Abbruchgrenze überschritten
        Info(REAL): Temperatur
- 9090: Geber-Temperatursensor: Temperaturwert nicht gültig
+ 9090: Motorgeber-Temperatursensor: Temperaturwert nicht gültig
  9091: 24V-Versorgung/Hauptrelais-Temperatursensor: Abbruchgrenze überschritten
  9092: Leistungsteil: Temperatursensor 5: Abbruchgrenze überschritten
        Info(REAL): Temperatur
@@ -535,14 +491,8 @@
        Info(REAL): Temperatur
  9106: Leistungsteil: Temperatursensor: Abbruchgrenze überschritten
        Info(UINT): Sensor
- 9107: Leistungsteil: Temperatursensor: Ausschaltgrenze überschritten
+ 9107: Leistungsteil: Temperatursensor: Abbruchgrenze überschritten
        Info(UINT): Sensor
- 9108: Motor: Temperatursensor: Multiplexer Referenzspannung fehlerhaft
-       Info(UINT): Multiplexer Stufe
- 9110: Motor-Temperaturmodell: Abbruchgrenze überschritten
-       Info(USINT): Phasenindex
- 9111: Motor-Temperaturmodell: Ausschaltgrenze überschritten
-       Info(USINT): Phasenindex
  9300: Stromregler: Überstrom
        Info(REAL): Grenzwert
  9302: Stromregler: Zykluszeit ungültig
@@ -557,15 +507,7 @@
        Info(UINT): Filter
 10103: Autotuning: Maximaler Schleppfehler überschritten
        Info(REAL): Aktueller Schleppfehler
-10104: Parameter Identifikation: Bewegung während Shuttlepositionsermittlung
-10105: Parameter Identifikation: Plausibilitätprüfung der Shuttlepositionen
 10500: Induktionshalt wurde abgebrochen
-11000: Intersegmentkommunikation: Verkabelungsfehler
-       Info(UDINT): Anschluss
-11101: Geber: Signalamplitude zu klein
-       Info(REAL): Position
-11102: Geber: Signalamplitude zu groß
-       Info(REAL): Position
 29200: Das Achsobjekt ist ungültig
        Info(UINT): PLCopen_FB
 29203: Antrieb nicht bereit
@@ -578,7 +520,7 @@
        Info(UINT): PLCopen_FB
 29207: Dieser Bewegungstyp ist derzeit nicht erlaubt
        Info(UINT): PLCopen_FB
-29208: Das Achsobjekt wurde seit dem letzten Funktionsbaustein-Aufruf geändert
+29208: Das Achsobjekt wurde seit dem letzten FB-Aufruf geändert
        Info(UINT): PLCopen_FB
 29209: Der Antrieb ist im Fehlerzustand
        Info(UINT): PLCopen_FB
@@ -594,7 +536,7 @@
        Info(UINT): PLCopen_FB
 29217: Ungültiger Eingabeparameter
        Info(UINT): PLCopen_FB
-29218: Unbekannter PLCopen-Achszustand
+29218: Unbekannter PLCopen Achszustand
        Info(UINT): PLCopen_FB
 29219: Ungültiger Wert für PLCopen-Parameter
        Info(UINT): PLCopen_FB
@@ -626,7 +568,7 @@
        Info(UINT): PLCopen_FB
 29237: Fehler in TriggerInput Parametern
        Info(UINT): PLCopen_FB
-29238: Dieser FB kann im aktuellen PLCopen-Achszustand nicht verwendet werden
+29238: Dieser FB kann im aktuellen Zustand nicht benutzt werden
        Info(UINT): PLCopen_FB
 29239: Diese Funktionalität ist für CAN-Bus nicht verfügbar
        Info(UINT): PLCopen_FB
@@ -670,17 +612,17 @@
        Info(UINT): PLCopen_FB
 29265: Kommunikation zum Antrieb ausgefallen
        Info(UINT): PLCopen_FB
-29266: Die MasterParID wurde seit dem letzten Funktionsbaustein-Aufruf geändert
+29266: Die MasterParID wurde seit dem letzten FB-Aufruf geändert
        Info(UINT): PLCopen_FB
 29267: Ungültige Anzahl von Kurvenscheibenpolynomen
        Info(UINT): PLCopen_FB
-29268: Der Funktionsbaustein wurde durch einen anderen abgebrochen
+29268: Der FB wurde durch einen anderen abgebrochen
        Info(UINT): PLCopen_FB
 29269: Fehler beim Speichern des NC-INIT-Parameter-Modules
        Info(UINT): PLCopen_FB
 29270: Fehler beim Laden des NC-INIT-Parameter-Modules
        Info(UINT): PLCopen_FB
-29271: Der ausgewählte Funktionsbaustein vom Typ MC_TouchProbe ist nicht aktiv
+29271: Der ausgewählte FB vom Typ MC_TouchProbe ist nicht aktiv
        Info(UINT): PLCopen_FB
 29272: Kurvenscheibenautomaten-Daten nicht initialisiert
        Info(UINT): PLCopen_FB
@@ -738,7 +680,7 @@
        Info(UINT): PLCopen_FB
 29301: Kein Kurvenscheibenwert berechenbar
        Info(UINT): PLCopen_FB
-29302: Es ist bereits eine Instanz des Funktionsbausteins auf dieser Achse aktiv
+29302: Es ist bereits eine Instanz des Funktionsblocks auf dieser Achse aktiv
        Info(UINT): PLCopen_FB
 29303: Die angegebene IntervalTime ist zu klein
        Info(UINT): PLCopen_FB
@@ -760,13 +702,9 @@
        Info(UINT): PLCopen_FB
 29313: FIFO - Maximalzahl an verfügbaren Elementen überschritten
        Info(UINT): PLCopen_FB
-29314: Der Funktionsbaustein wird in der falschen Taskklasse aufgerufen
+29314: Der Funktionsblock wird in der falschen Taskklasse aufgerufen
        Info(UINT): PLCopen_FB
 29315: Abbruch der zyklischen Positionsübertragung wegen Achsfehler
-       Info(UINT): PLCopen_FB
-29316: Zwei-Geberregelung ist nicht aktiviert
-       Info(UINT): PLCopen_FB
-29488: Permanente Variable für Endlosposition wurde überschrieben
        Info(UINT): PLCopen_FB
 29489: Interne Daten in der Achsstruktur sind ungültig
        Info(UINT): PLCopen_FB
@@ -819,8 +757,8 @@
        Info(UDINT): Timeout [us]
 32012: Fehler bei Lesen der Modulbeschreibung des Systemmoduls
 32013: Kein Betriebssystem auf dem Antrieb vorhanden
-32014: NCSYS-Version auf dem Antrieb nicht kompatibel zu NC-Software-Version
-       Info(UINT): NCSYS-Version auf dem Antrieb
+32014: Betriebssystem-Version auf dem Antrieb nicht kompatibel zu NC-Manager-Version
+       Info(UINT): Betriebssystem-Version auf dem Antrieb
 32015: Fehler bei Erzeugen der Message-Queue
        Info(UINT): Status von q_create()
 32016: Fehler bei Senden eines Restzeit-Kommandos an den NC-Manager-Task
@@ -830,7 +768,7 @@
 32018: Ungültige Parameter-ID im Systemmodul
        Info(UINT): Parameter-ID
 32019: NC-Systemmodul-Download nicht erlaubt (das Modul ist auf der SPS vorhanden)
-32020: Systemmodul-Daten konnten zur Initialisierung nicht vom Antrieb gelesen werden
+32020: Systemmodul-Daten konnten bei NC-Manager-INIT nicht vom Antrieb gelesen werden
 32021: Systemmodul-Daten konnten nach Download nicht vom Antrieb gelesen werden
 32022: Fehler bei Abbruch des Datenblock-Zugriffes vor Download
 32023: Fehler bei Lesen des Boot-Zustandes vor Download
@@ -886,7 +824,7 @@
 32067: Parameter-ID ungültig (Parameter mit Option ncDATA_TEXT setzen/lesen)
 32069: Die Adresse der ACOPOS-Parameter im Modul acp10cfg kann nicht gelesen werden
 32070: Antrieb für ACOPOS-Parameter im Modul acp10cfg nicht gefunden
-       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebs
+       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebes
 32071: Die ACOPOS-Parameter sind ungültig (ein AutomationStudio-Update ist notwendig)
 32072: Falscher Boot-Zustand nach SW-Reset
        Info(UINT): Boot-Zustand
@@ -895,7 +833,7 @@
        Info(UINT): Versions-ID vom NC-Systemmodul (im HB) und Versions-ID vom ACOPOS (im LB)
 32075: Inkompatible NC-Hardware-Version: Download des Betriebssystems nicht möglich
        Info(UINT): Versions-ID vom NC-Systemmodul (im HB) und Versions-ID vom ACOPOS (im LB)
-32076: Die FIFO für hochpriore Messages an den NC-Idle-Task ist voll
+32076: FIFO für hochpriore Messages an den NC-Manager-Task ist voll
 32077: Eine POWERLINK Knotennummer im Modul acp10cfg ist ungültig
 32078: Eine POWERLINK Knotennummer im Modul acp10cfg wird mehrfach verwendet
 32079: Mit dieser Variante muss ein CAN-Interface im Modul acp10cfg sein
@@ -978,8 +916,8 @@
 32136: Die Daten-Section des angegebenen NC-Datenmoduls ist leer
        Info(UINT): Nummer der Daten-Section
 32137: Daten-Adresse der Struktur für eine Datenblock-Operation ist Null
-32138: Daten-Adresse Null (Datenstruktur für Datenblock-Operation)
-32139: Daten-Länge Null (Datenstruktur für Datenblock-Operation)
+32138: Daten-Adresse Null (Anwenderdaten für Datenblock-Operation)
+32139: Daten-Länge Null (Anwenderdaten für Datenblock-Operation)
 32140: Datenblock-Operation: Datenmodul-Name oder Daten-Adresse muss Null sein
 32141: Ungültiges Daten-Format in einer Parameter-Sequenz
 32142: ID oder Typ eines Parameters ungültig in Parameter-Sequenz mit Textformat
@@ -1018,7 +956,7 @@
 32169: Die mit NodeNr_SwNodeSelect definierte Knotennummer ist ungültig
        Info(UINT): Knotennummer
 32170: Für diese Datenblock-Operation muss ein Datenmodul-Name eingegeben werden
-32171: Index Null ist nicht erlaubt (Datenstruktur für Datenblock-Operation)
+32171: Index Null ist nicht erlaubt (Anwenderdaten für Datenblock-Operation)
 32172: Der angegebene Datenmodul-Name ist für ein BR-Modul nicht gültig
        Info(UINT): Status von conv_asc2brstr()
 32173: Speicher für Datenmodul-Erzeugung kann nicht allokiert werden
@@ -1031,14 +969,14 @@
        Info(UDINT): Index dieses Parameters in der Parameter-Sequenz
 32177: Text für Parameter-Daten zu groß für Parameter-Liste mit Textformat
        Info(UDINT): Index dieses Parameters in der Parameter-Liste
-32178: Diese Achse ist für diesen ACOPOS nicht freigegeben (Kanalnummer zu hoch)
+32178: Dieses NC-Objekt ist für diesen ACOPOS nicht freigegeben (Kanalnummer zu hoch)
        Info(UINT): Maximale Kanalnummer
 32179: ID oder Typ eines Parameters ungültig in Parameter-Liste mit Textformat
        Info(UDINT): Index dieses Parameters in der Parameter-Liste
 32180: Daten-Adresse der Struktur für eine Parameter-Listen-Operation ist Null
-32181: Daten-Adresse Null (Datenstruktur für Parameter-Listen-Operation)
-32182: Daten-Länge Null (Datenstruktur für Parameter-Listen-Operation)
-32183: Daten-Länge ungültig (Datenstruktur für Parameter-Listen-Operation)
+32181: Daten-Adresse Null (Anwenderdaten für Parameter-Listen-Operation)
+32182: Daten-Länge Null (Anwenderdaten für Parameter-Listen-Operation)
+32183: Daten-Länge ungültig (Anwenderdaten für Parameter-Listen-Operation)
 32184: Ungültiges Daten-Format in einer Parameter-Liste
 32185: Daten eines Parameters in einer Parameter-Liste länger als 6 Bytes
        Info(UDINT): Index dieses Parameters in der Parameter-Liste
@@ -1109,18 +1047,18 @@
 32226: Eine SDC-Knotennummer im Modul acp10cfg ist ungültig
 32227: Eine SDC-Knotennummer im Modul acp10cfg wird mehrfach verwendet
 32228: Es ist kein Netzwerk-Interface (POWERLINK oder SDC) in acp10cfg enthalten
-32229: Das für die Bedienung von SDC Achsen notwendige SDC Objekt existiert nicht
-32230: Fehler bei der Initialisierung des SDC oder SIM Objekts (siehe Logger)
+32229: Das Objekt acp10sdc existiert nicht (notwendig für SDC NC-Objekte)
+32230: Fehler bei der Initialisierung von ACP10SDC oder ACP10SIM (siehe Logger)
 32231: Fehler bei der SDC Konfiguration (siehe Logger)
-32232: Das für ACOPOS Simulation notwendige SIM Objekt existiert nicht
-32233: NCBSL (Name siehe Logger) enthält kein NC-Systemmodul mit Modultyp 0x4F
-32234: NCSYS (Name siehe Logger) enthält kein NC-Systemmodul mit Modultyp 0x4F
+32232: Das Objekt acp10sim existiert nicht (notwendig für ACOPOS Simulation)
+32233: Das Objekt acp10bsl enthält kein NC-Systemmodul
+32234: Das Objekt acp10sys enthält kein NC-Systemmodul
 32235: Daten-Adresse Null für Parameter in Parameter-Sequenz
        Info(UDINT): Index dieses Parameters in der Parameter-Sequenz
 32236: Daten-Adresse Null für Parameter in Parameter-Liste
        Info(UDINT): Index dieses Parameters in der Parameter-Liste
 32237: Kanal-Index für ACOPOS-Parameter im Modul acp10cfg ist ungültig
-       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebs
+       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebes
 32238: Diese Funktion ist derzeit nicht implementiert
 32239: Basis-Speicher für INIT-Parameter-Module konnte nicht allokiert werden
        Info(UINT): Status von SM_malloc()
@@ -1128,13 +1066,13 @@
 32241: Datenblock-Operation: Datenmodul-Name muss Null sein
 32243: Fehler bei plAction(GET_PDO_INFO) (weitere Info im Logger)
        Info(UINT): Status von plAction()
-32244: Kein PDO für diesen Kanal im zykl. Frame definiert: Der Kanal ist gesperrt
+32244: Kein PDO für diesen Kanal im zykl. Frame definiert: NC-Objekt ist gesperrt
 32245: Der Speicher zur Bedienung des Broadcast-Kanals kann nicht allokiert werden
 32246: 'Direction' des POWERLINK Broadcast-Kanals ist nicht 'Output'
 32247: Fehler bei plAction(GET_TC_INFO) (weitere Info im Logger)
        Info(UINT): Status von plAction()
 32248: ACOPOS-Parameter Header im Modul acp10cfg ungültig (Section überschritten)
-       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebs
+       Info(UINT): Interface-Index (im HB) und Knotennummer (im LB) dieses Antriebes
 32249: ACOPOS-Parameter Deskriptor im Modul acp10cfg ungültig (Section überschritten)
 32250: ACOPOS-Parameter im Modul acp10cfg: Länge der Parameter-Daten zu groß
        Info(UINT): Maximal erlaubte Länge
@@ -1145,20 +1083,13 @@
        Info(USINT): Maximale Taskklassennummer
 32254: Kein PDO Mapping definiert (PDO Mapping ist für diese ACOPOS ID erforderlich)
        Info(USINT): ACOPOS ID
-32255: Trace Start ist nicht erlaubt während Trace aktiv ist
-32256: Trace Trigger: Daten ungültig
-       Info(UINT): Index des Trigger-Satzes
-32257: Trace Trigger: Dieser Kanal ist für diesen ACOPOS nicht freigegeben
-       Info(UINT): Index des Trigger-Satzes
-32258: Mehr als ein Trace Trigger für einen Kanal definiert
-       Info(UINT): Index des Trigger-Satzes
 32259: Derzeit sind keine Trace-Daten zum Sichern vorhanden
 32260: Trace: Es ist kein gültiger Testdatenpunkt definiert
-32261: Trace Trigger: Daten ungültig
-32262: Trace Testdatenpunkt: Daten ungültig
+32261: Trace Trigger: Das NC-Objekt ist ungültig
+32262: Trace Testdatenpunkt: Das NC-Objekt ist ungültig
        Info(UINT): Index des Testdatenpunktes
-32263: Trace Trigger: Dieser Kanal ist für diesen ACOPOS nicht freigegeben
-32264: Trace Testdatenpunkt: Dieser Kanal ist für diesen ACOPOS nicht freigegeben
+32263: Trace Trigger: Das NC-Objekt ist für diesen ACOPOS nicht freigegeben
+32264: Trace Testdatenpunkt: Das NC-Objekt ist für diesen ACOPOS nicht freigegeben
        Info(UINT): Index des Testdatenpunktes
 32265: Trace Trigger: Trace für dieses NC-Objekt bereits aktiv bei Trace-Start
 32266: Trace Testdatenpunkt: Trace für dieses NC-Objekt bereits aktiv bei Trace-Start
@@ -1177,26 +1108,26 @@
 32273: ACOPOS Kopplung: Das NC-Objekt der Sendedaten ist ungültig
 32274: Netzwerk Kopplung: Der Broadcast-Kanal wurde nicht konfiguriert
 32275: Netzwerk Kopplung: Der Broadcast-Kanal wurde nicht erfolgreich initialisiert
-32276: Netzwerk Kopplung: Zykluszeiten nicht gleich (POWERLINK, NC Taskklasse)
+32276: Netzwerk Kopplung: Zykluszeiten nicht gleich (Netzwerk-IFs, NC Taskklasse)
 32277: Netzwerk Kopplung: Im Broadcast-Kanal hat kein Datensatz mehr Platz
 32278: ACOPOS Kopplung: Null als Parameter-ID der Sendedaten ist nicht erlaubt
 32279: Service-Schnittstelle: Daten-Adresse Null
 32280: Timeout für Freigabe der azyklischen Netzwerk Kommunikation
        Info(UDINT): Timeout [s]
 32281: Version von SafeMC kleiner als Minimalversion (siehe Logger)
-32282: Netzwerk Kopplung: Inkompatible Zykluszeiten (POWERLINK, NC Taskklasse)
-32283: INIT Broadcast Datenpunkt: Aufruf der Aktion nur mit NC Taskklasse erlaubt
-       Info(USINT): Nummer der NC Taskklasse
+32282: Netzwerk Kopplung: Inkompatible Zykluszeiten (Netzwerk-IFs, NC Taskklasse)
+32283: INIT Broadcast Datenpunkt: Aufruf der NC-Aktion nur in NC-Manager TK erlaubt
+       Info(USINT): Nummer der NC-Manager Taskklasse
 32284: Erw. Kopplungs-Daten: Mit dieser AR/NC Version nur für TK1 mit synchr. Output
-       Info(USINT): Nummer der NC Taskklasse
-32285: INIT Broadcast Datenpunkt: Inkompatible Zykluszeiten (POWERLINK, NC Taskkl.)
+       Info(USINT): Nummer der NC-Manager Taskklasse
+32285: INIT Broadcast Datenpunkt: Inkompatible Zykluszeiten (POWERLINK, NC-Manager)
        Info(USINT): Erweiterte Kopplungs-Daten für ACP10_MC_BROADCAST (0/1: Nein/Ja)
 32286: Netzwerk Kopplung: Inkompatible Zykluszeiten (Netzwerk-IFs, NC Taskklasse)
        Info(USINT): Erweiterte Kopplungs-Daten für ACP10_MC_BROADCAST (0/1: Nein/Ja)
 32287: Erweiterte Kopplungs-Daten nicht möglich (OutTime Differenz zu groß)
        Info(UDINT): Differenz zwischen maxOutTime und minOutTime
 32288: Erweiterte Kopplungs-Daten nicht möglich (Taskklassen-Toleranz ist nicht Null)
-       Info(USINT): Nummer der NC Taskklasse
+       Info(USINT): Nummer der NC-Manager Taskklasse
 32289: Netzwerk Kopplung: SDC/SIM Master und Slave in unterschiedlichen Taskklassen
 32290: INIT Broadcast Datenpunkt: Aufruf der NC-Aktion nur in SDC Taskklasse erlaubt
        Info(USINT): Taskklassennummer des zugehörigen SDC Interface
@@ -1213,10 +1144,9 @@
        Info(UDINT): Maximale Anzahl
 32330: Setup: Daten eines ACOPOS-Parameters länger als 6 Bytes
        Info(UINT): Parameter-ID
-32331: Setup starten nicht möglich: Der Modus-Parameter ist Null
 32396: Die Änderung der Zykluszeit ist für diesen ACOPOS Hardware Typ nicht erlaubt
-32397: NCSYS-Version auf dem Zielsystem ist nicht kompatibel mit NC-Software-Version
-32398: NCSYS enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
+32397: NCSYS-Version auf dem Zielsystem ist nicht kompatibel zu NCMAN-Version
+32398: acp10sys enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
 32399: Manueller ACOPOS-Restart (POWER-OFF/-ON) nach NCSYS-Download notwendig
 32400: Speicher kann nicht allokiert werden
        Info(UDINT): Speichergröße
@@ -1255,8 +1185,6 @@
 32428: Das Datenobjekt-Format ist ungültig
 32429: MTC-Daten: Maximale Anzahl von Testdatenpunkten überschritten
        Info(UINT): Maximale Anzahl
-32430: Daten konnten nicht vom NCSBSL Modul (Name siehe Logger) gelesen werden
-32431: Daten konnten nicht vom NCSYS Modul (Name siehe Logger)  gelesen werden
 32492: ACOPOS Simulation: TK für zykl. PLCopen Daten ungleich NC-Manager TK
 32494: AcoposSimulation=Off für einen Kanal, obwohl für den anderen Kanal aktiviert
        Info(USINT): Kanalnummer mit AcoposSimulation=Off
@@ -1272,28 +1200,28 @@
 32500: Die Message-FIFO ist bereits vorhanden
 32501: Fehler beim Erzeugen der Message-FIFO
        Info(UINT): Status von RtkCreateFifo()
-32502: Die Critical Section für das Kommando-Semaphor ist bereits vorhanden
+32502: Die Critical Section für das Kommando-Semaphor ist bereits vorhanden 
 32503: Fehler beim Erzeugen der Critical Section für das Kommando-Semaphor
        Info(UINT): Status von RtkCreateCriticalSection()
-32504: Der NC-Idle-Task ist bereits vorhanden
-32505: Fehler beim Erzeugen des NC-Idle-Task
+32504: Der NC-Manager-Idle-Task ist bereits vorhanden 
+32505: Fehler beim Erzeugen des NC-Manager-Idle-Tasks
        Info(UINT): Status von RtkCreateTask()
 32506: Fehler beim Lesen der Taskklassen-Zykluszeit
        Info(UINT): Status von GetTaskclassCycleTime()
 32507: Fehler beim Lesen der Taskklassen-Toleranz
        Info(UINT): Status von GetTaskclassMaxCycleTime()
-32508: Fehler bei Senden eines Restzeit-Kommandos an den NC-Idle-Task
+32508: Fehler bei Senden eines Restzeit-Kommandos an den NC-Manager-Task 
        Info(UINT): Status von RtkWriteFifo()
-32509: Die Critical Section für den Netzwerk-Kommando-Trace ist bereits vorhanden
+32509: Die Critical Section für den Netzwerk-Kommando-Trace ist bereits vorhanden 
 32510: Fehler beim Erzeugen der Critical Section für den Netzwerk-Kommando-Trace
        Info(UINT): Status von RtkCreateCriticalSection()
 32511: Die Critical Section für hochpriore Messages ist bereits vorhanden 
 32512: Fehler beim Erzeugen der Critical Section für hochpriore Messages
        Info(UINT): Status von RtkCreateCriticalSection()
-32513: Die Critical Section für globale Variablen ist bereits vorhanden
+32513: Die Critical Section für globale Variablen ist bereits vorhanden 
 32514: Fehler beim Erzeugen der Critical Section für globale Variablen
        Info(UINT): Status von RtkCreateCriticalSection()
-32515: Die Critical Section für Netzwerk-Kopplung ist bereits vorhanden
+32515: Die Critical Section für Netzwerk-Kopplung ist bereits vorhanden 
 32516: Fehler beim Erzeugen der Critical Section für Netzwerk-Kopplung
        Info(UINT): Status von RtkCreateCriticalSection()
 32738: Fehler bei Schreiben in die SDM Motion FIFO
@@ -1361,10 +1289,6 @@
 35011: SMC FS: Interner Fehler, Funkt.-Parameter ausserhalb des erlaubten Bereichs
        Info(UDINT): Befehlszähler (PC)
 35012: SMC FS: Nicht sicherer Geber angeschlossen
-35013: SMC FS: ACP10 Version unterstützt nicht die aktivierten Sicherheitsfkt.
-       Info(UDINT): ACPCom Version
-35014: SMC FS: Funktion wird von Hardware nicht unterstützt.
-       Info(UDINT): Zusatzinfo
 35016: SMC FS: Interner Fehler, Kreuzkommunikation der Prüfpunkte
        Info(UDINT): Prüfpunkt ID
 35017: SMC FS: Interner Fehler, Kreuzkommunikation des Statusworts
@@ -1416,19 +1340,6 @@
 35054: SMC FS: SMP - Toleranz ist größer als SMP Positionsfenster
 35055: SMC FS: SLP - Toleranz ist größer als SLP Positionsfenster
 35056: SMC FS: Wert der Verzögerungsrampe ist außerhalb des gültigen Bereichs
-35057: SMC FS: SLT Parametrierung - Momentgrenze zu groß
-       Info(UDINT): Zusatzinfo
-35058: SMC FS: Motor Parametrierung - Moment Kennlinie ungültig
-       Info(UDINT): Zusatzinfo
-35059: SMC FS: Blackout Mode Parametrierung - Configured SF ungültig
-       Info(UDINT): Zusatzinfo
-35060: SMC FS: SSO Toleranz verletzt Konfigurationsvorschrift
-35061: SMC FS: SMS - Geschwindigkeitsgrenze verletzt Konfigurationsvorschrift
-35062: SMC FS: SMS - Überwachung des Geschwindigkeitsschleppfehlers nicht aktiviert
-35063: SMC FS: SMS - Überwachung des Positionsschleppfehlers aktiviert
-35064: SMC FS: SMS - Referenzieren aktiviert 
-35065: SMC FS: SMS - Eine nicht zulässige Sicherheitsfunktion ist aktiviert 
-35066: SMC FS: SMS - Encoder-Modus nicht zulässig
 35068: SMC FS: "Homing - Maximum trigger speed" außerhalb des gültigen Bereichs
 35069: SMC FS: Homing - Ref Switch: Kein Referenzschalter angeschlossen
 35070: SMC FS: Homing - Home Offset: Kein Absolutgeber angeschlossen
@@ -1523,8 +1434,6 @@
 35128: SMC FS: Interner Fehler, Sigma delta Wandlung ist nicht plausibel
 35129: SMC FS: Interner Fehler, Gain/Offset korrigierte Stromwerte ungültig
 35130: SMC FS: Interner Fehler, Testfall
-35131: SMC FS: Interner Fehler
-35132: SMC FS: Interner Fehler
 35150: SMC FS: Nachladbare Safety Parameter: Deakt. Funktion Enable Bit gesetzt
        Info(UDINT): Zusatzinfo
 35151: SMC FS: Nachladbare Safety Parameter: Platzhalter Enable Bit gesetzt
@@ -1582,7 +1491,7 @@
        Info(UDINT): Zusatzinfo
 35191: SMC: Safe Brake Test - Testintervall abgelaufen, Testung erforderlich
 35192: SMC: Summenstrom außerhalb der Toleranz
-       Info(DINT): Summenstrom [uA]
+       Info(DINT): Messwert des Summenstrom [uA]
 35193: SMC: Strom außerhalb des Stromwandlerbereichs Phase U
        Info(DINT): Messwert des Stroms [uA]
 35194: SMC: Strom außerhalb des Stromwandlerbereichs Phase V
@@ -1665,21 +1574,11 @@
 35254: SMC: Geber - Länge des physikalischen Referenzsystems zu groß
        Info(UDINT): Zusatzinfo
 35255: SMC FS: Geber - Die Beschleunigungsgrenze wurde überschritten
-35497: SMC: Blackout Mode - Verzögerungszeit ist abgelaufen
-       Info(UDINT): Zusatzinfo
-35498: SMC: SSO - Keine Begrenzung der beobachteten Beschleunigung möglich
-       Info(UDINT): Zusatzinfo
-35499: SMC FFS: Strommessfehler wurde erkannt
-35500: SMC: SSO - Safe speed observer Geschwindigkeitsfehler
-       Info(UDINT): Zusatzinfo
-35501: SMC: SSO - Safe speed observer Geschwindigkeitsfehler
-       Info(UDINT): Zusatzinfo
 35502: SMC: UTILS - Testinterface, dummy logbook entry
 35503: SMC FFS: Interner Fehler in der ADC Konvertierung 
        Info(UDINT): Zusatzinfo
 35504: SMC FFS: RSP - Homing, INT32 Überlauf der S_SafePosition
        Info(UDINT): Zusatzinfo
-35505: SMC FFS: SLT - Verletzung der Momentgrenze
 35506: SMC FFS: RSP - Homing, Positionsänderung im ausgeschalteten Zustand zu groß
        Info(UDINT): Zusatzinfo
 35507: SMC FFS: RSP - Homing, Konfigurationsänderung
@@ -1709,16 +1608,15 @@
        Info(UINT): Detail
 37113: Ausgleichsgetriebe: Grenzwerte überschritten
        Info(USINT): Zustands-Index
+38000: Stromregler: Während dem Einschalten ist Motordrehzahl zu hoch
 38001: Momentbegrenzer: Grenzwert größer als Maximalwert
        Info(REAL): Maximalwert
 38003: Motorhaltebremse: Prüfmoment wurde begrenzt 
 38004: Motorhaltebremse: Prüfmoment kleiner als Lastmoment 
+38005: Motortest: Geschwindigkeit ist während dem Einschalten zu hoch
+       Info(REAL): Grenzgeschwindigkeit
 38006: Stromregler: Zulässige Stromoffsetwerte überschritten
 38008: Bremswiderstand: Kein Stromfluss
-38009: Wechselrichter: Ausgang: Stromflusstest abgebrochen
-       Info(USINT): Phase
-39000: Geber: Warnung aktiv
-       Info(USINT): Geber
 39001: Geber: Positionskorrektur aktiv
        Info(USINT): Geber
 39002: Resolver: Geschwindigkeitsschranke für 14Bit Auflösung überschritten
@@ -1771,7 +1669,7 @@
        Info(USINT): Geber
 39026: EnDat-Geber: Fehler Type 3 bei EnDat2.2 Zusatzinformationen
        Info(USINT): Geber
-39027: Geberemulation: Spannungsversorgung fehlerhaft
+39027: Geberemulation: 5V-Spannungsversorgung fehlerhaft
        Info(USINT): Geber
 39028: Geber: Multiturnfehler
        Info(USINT): Geber
@@ -1835,18 +1733,6 @@
        Info(USINT): Geber
 39061: Geber: UART Übertragungsfehler 
        Info(USINT): Geber
-39086: Geber: Register Adresse
-       Info(UDINT): Adresse
-39087: Geber: Register Daten
-       Info(UDINT): Daten
-39088: Geber: HIPERFACE DSL: Online Status: Bit 4: ANS: Falsche Antwort erkannt
-       Info(USINT): Geber
-39089: Geber: HIPERFACE DSL: Online Status: Bit 10: VPOS: Sichere Position ungültig
-       Info(USINT): Geber
-39090: Geber: HIPERFACE DSL: Online Status: Bit 11: POS: Schätzer eingeschaltet
-       Info(USINT): Geber
-39091: Geber: HIPERFACE DSL: Online Status: Bit 13: SCE: CRC-Fehler Safe Channel
-       Info(USINT): Geber
 39301: Analog/Digital IO: 24V-Spannungsversorgung fehlerhaft
        Info(USINT): Slot
 39302: Digital IO 1-4: Diagnosebit aktiv (Strom, 24V Versorgung)
@@ -1861,24 +1747,20 @@
        Info(USINT): Slot
 39308: Analog/Digital IO: Diagnosebit aktiv
        Info(USINT): Slot
-39309: Digital IO: Digital Ausgang: Diagnosebit aktiv
+39309: Digital IO: Diagnosebit aktiv
        Info(UINT): Digital IOs
-39310: Analog IO: Analog Ausgang: Diagnosebit aktiv
-       Info(USINT): Analog IOs
-39311: Analog IO: Analog Eingang: Eingang gestört
-       Info(USINT): Analog IOs
-39312: Analog IO: Analog Eingang: Analogwert kleiner als Minimalwert
-       Info(USINT): Analog IOs
-39313: Analog IO: Analog Eingang: Analogwert größer als Maximalwert
-       Info(USINT): Analog IOs
-39314: Analog IO: Analog Eingang: Analogwert unterhalb des Messbereichs
-       Info(USINT): Analog IOs
-39315: Analog IO: Analog Eingang: Analogwert oberhalb des Messbereichs
-       Info(USINT): Analog IOs
-39316: Analog IO: Analog Eingang: Analogwert verfälscht
-       Info(USINT): Analog IOs
-39317: Analog IO: Analog Ausgang: Eingangswert ausserhalb des Gültigkeitsbereichs
-       Info(USINT): Analog IOs
+39310: Analog IO: Diagnosebit aktiv
+       Info(UDINT): Zusatzinformation
+39311: Analog IO: Analog Eingang gestört
+       Info(USINT): Slot
+39312: Analog IO: Analogwert zu klein
+       Info(USINT): Analog IO
+39313: Analog IO: Analogwert zu groß
+       Info(USINT): Analog IO
+39314: Analog IO: Drahtbruch oder Analogwert unterhalb des Messbereichs
+       Info(USINT): Analog IO
+39315: Analog IO: Drahtbruch oder Analogwert oberhalb des Messbereichs
+       Info(USINT): Analog IO
 39500: Geber: HIPERFACE: Status: Abgleichdaten fehlerhaft (01h)
        Info(USINT): Geber
 39501: Geber: HIPERFACE: Status: Sensor nicht eingestellt oder gerade dabei (20h)
@@ -1943,92 +1825,6 @@
        Info(USINT): Geber
 39546: Geber: HIPERFACE: Status: Multiturn Zählerfehler (24h)
        Info(USINT): Geber
-39594: Geber: HIPERFACE DSL: Geber Status: Plausibilitätsfehler (ST0:4)
-       Info(USINT): Geber
-39596: Geber: HIPERFACE DSL: Geber Status: Falschkonfigurationsfehler (ST0:6)
-       Info(USINT): Geber
-39597: Geber: HIPERFACE DSL: Geber Status: Crosscheck Fehler (ST0:7)
-       Info(USINT): Geber
-39600: Geber: HIPERFACE DSL: Geber Status: Protokoll Reset-Anzeige (ST0:0)
-       Info(USINT): Geber
-39601: Geber: HIPERFACE DSL: Geber Status: Beschleunigungsüberlauffehler (ST0:1)
-       Info(USINT): Geber
-39602: Geber: HIPERFACE DSL: Geber Status: Test läuft (ST0:2)
-       Info(USINT): Geber
-39603: Geber: HIPERFACE DSL: Geber Status: Drift-Kompensationsfehler (ST0:3)
-       Info(USINT): Geber
-39604: Geber: HIPERFACE DSL: Geber Status: Positionsverfolgungsfilter-Fehler (ST0:4)
-       Info(USINT): Geber
-39605: Geber: HIPERFACE DSL: Geber Status: Positionsvektorlängen-Fehler (ST0:5)
-       Info(USINT): Geber
-39606: Geber: HIPERFACE DSL: Geber Status: Zählerfehler (ST0:6)
-       Info(USINT): Geber
-39607: Geber: HIPERFACE DSL: Geber Status: Positionssynchronisierungsfehler (ST0:7)
-       Info(USINT): Geber
-39610: Geber: HIPERFACE DSL: Geber Status: Singleturn Fehler (ST1:0)
-       Info(USINT): Geber
-39611: Geber: HIPERFACE DSL: Geber Status: Multiturn-Amplitudenfehler (ST1:1)
-       Info(USINT): Geber
-39612: Geber: HIPERFACE DSL: Geber Status: Multiturn-Sync-Fehler (ST1:2)
-       Info(USINT): Geber
-39613: Geber: HIPERFACE DSL: Geber Status: Multiturn-Vektorlängenfehler (ST1:3)
-       Info(USINT): Geber
-39614: Geber: HIPERFACE DSL: Geber Status: Positionsüberprüfungsfehler (ST1:4)
-       Info(USINT): Geber
-39620: Geber: HIPERFACE DSL: Geber Status: Einschalt-Selbsttest durchgeführt (ST2:0)
-       Info(USINT): Geber
-39621: Geber: HIPERFACE DSL: Geber Status: Sicherheitsparameter Warnung (ST2:1)
-       Info(USINT): Geber
-39622: Geber: HIPERFACE DSL: Geber Status: Sicherheitsparameter Fehler (ST2:2)
-       Info(USINT): Geber
-39623: Geber: HIPERFACE DSL: Geber Status: Standard Parameter Fehler (ST2:3)
-       Info(USINT): Geber
-39624: Geber: HIPERFACE DSL: Geber Status: Interner Kommunikationsfehler 1 (ST2:4)
-       Info(USINT): Geber
-39625: Geber: HIPERFACE DSL: Geber Status: Interner Kommunikationsfehler 2 (ST2:5)
-       Info(USINT): Geber
-39626: Geber: HIPERFACE DSL: Geber Status: Interner Systemfehler (ST2:6)
-       Info(USINT): Geber
-39630: Geber: HIPERFACE DSL: Geber Status: Kritische Temperatur (ST3:0)
-       Info(USINT): Geber
-39631: Geber: HIPERFACE DSL: Geber Status: Kritischer LED-Strom (ST3:1)
-       Info(USINT): Geber
-39632: Geber: HIPERFACE DSL: Geber Status: Kritische Versorgungsspannung (ST3:2)
-       Info(USINT): Geber
-39633: Geber: HIPERFACE DSL: Geber Status: Kritische Rotationsgeschwindigkeit (ST3:3)
-       Info(USINT): Geber
-39634: Geber: HIPERFACE DSL: Geber Status: Kritische Beschleunigung (ST3:4)
-       Info(USINT): Geber
-39635: Geber: HIPERFACE DSL: Geber Status: Zählerüberlauf (ST3:5)
-       Info(USINT): Geber
-39636: Geber: HIPERFACE DSL: Geber Status: Interner Überwachungsfehler (ST3:6)
-       Info(USINT): Geber
-39638: Geber: HIPERFACE DSL: Geber Status: Kritische Rotorposition (ST3:1)
-       Info(USINT): Geber
-39640: Geber: HIPERFACE DSL: Geber Status: Ungültiger Zugang (ST4:0)
-       Info(USINT): Geber
-39641: Geber: HIPERFACE DSL: Geber Status: Zugriff abgelehnt (ST4:1)
-       Info(USINT): Geber
-39642: Geber: HIPERFACE DSL: Geber Status: Ressourcenzugriffsfehler (ST4:2)
-       Info(USINT): Geber
-39643: Geber: HIPERFACE DSL: Geber Status: Dateizugriffsfehler (ST4:3)
-       Info(USINT): Geber
-39670: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:0)
-       Info(USINT): Geber
-39671: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:1)
-       Info(USINT): Geber
-39672: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:2)
-       Info(USINT): Geber
-39673: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:3)
-       Info(USINT): Geber
-39674: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:4)
-       Info(USINT): Geber
-39675: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:5)
-       Info(USINT): Geber
-39676: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:6)
-       Info(USINT): Geber
-39677: Geber: HIPERFACE DSL: Geber Status: Benutzerdefinierte Warnung (ST7:7)
-       Info(USINT): Geber
 41001: Kühler-Temperatursensor: Warngrenze überschritten
        Info(REAL): Kühlertemperatur
 41002: Kühler-Temperatursensor: Nicht angeschlossen oder zerstört
@@ -2058,7 +1854,7 @@
        Info(REAL): Temperatur
 41087: Leistungsteil: Temperatursensor 4: Warngrenze überschritten
        Info(REAL): Temperatur
-41089: Geber-Temperatursensor: Warngrenze überschritten
+41089: Motorgeber-Temperatursensor: Warngrenze überschritten
        Info(REAL): Temperatur
 41090: 24V-Versorgung/Hauptrelais-Temperatursensor: Warngrenze überschritten
 41091: Leistungsteil: Temperatursensor 5: Warngrenze überschritten
@@ -2077,10 +1873,6 @@
        Info(REAL): Temperatur
 41098: Leistungsteil: Temperatursensor: Warngrenze überschritten
        Info(UINT): Sensor
-41099: Motor-Temperaturmodell: Warngrenze überschritten
-       Info(USINT): Phasenindex
-41100: Motor: Temperatursensoren: Temperaturdifferenz zu hoch
-       Info(UINT): Sensorindex
 64002: Wartezeit vor SW-Reset (Netzwerk mit aufsteigenden Knotennummern ?)
 64003: Wartezeit vor NC-System-Start (Netzwerk mit aufsteigenden Knotennummern ?)
 64004: Der folgende Hochlauf-Fehler könnte hier mit Verzögerung eingetragen sein
@@ -2096,12 +1888,10 @@
        Info(UINT): Index des POWERLINK Interface in Acp10cfg (Name im Logger)
 64010: NC Software Testversion (Gültigkeitsperiode im Logger)
 64011: Timeout für Abschluss der Geber-Initialisierung
-64012: NCSYS enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
+64012: acp10sys enthält kein Betriebssystem für diesen ACOPOS Hardware Typ
 64013: Die Basis-Initialisierung wurde wegen eines Fehlers abgebrochen
 64014: Kein ganzzahliges Zykluszeitverhältnis von NetCyc und POWERLINK
        Info(UDINT): NetCyc Zykluszeit [us]
 64015: Kein ganzzahliges Zykluszeitverhältnis von NetCyc und POWERLINK "multiplexed"
        Info(UDINT): NetCyc Zykluszeit [us]
-64016: Name der SDC Achskonfigurations-PV ist zu lang (PV wird nicht verwendet)
-       Info(UINT): Maximal zulässige Anzahl von Zeichen
 65535: Response-Fehler

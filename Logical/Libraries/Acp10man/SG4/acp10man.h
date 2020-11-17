@@ -1,8 +1,8 @@
-/* acp10man.h V5.11.1 */ 
+/* acp10man.h V5.02.1 */ 
 /* COPYRIGHT (C) B&R Industrial Automation GmbH */ 
 
 #ifndef ACP10MAN_H_VERSION 
-#define ACP10MAN_H_VERSION 0x5111 
+#define ACP10MAN_H_VERSION 0x5021 
 
 #include <ncglobal.h>
 #include <acp10par.h>
@@ -275,8 +275,6 @@ typedef struct ACP10CTRUF_typ {               /* U/f Control */
 } ACP10CTRUF_typ;
 
 typedef struct ACP10CTRFF_typ {               /* Feed Forward Control */
-   UINT               mode;                   /* Mode */
-   UINT               reserve;                /* Reserved */
    REAL               torque_load;            /* Load torque */
    REAL               torque_pos;             /* Torque in positive direction */
    REAL               torque_neg;             /* Torque in negative direction */
@@ -284,30 +282,6 @@ typedef struct ACP10CTRFF_typ {               /* Feed Forward Control */
    REAL               inertia;                /* Mass moment of inertia */
    REAL               t_filter_a;             /* Acceleration filter time constant */
 } ACP10CTRFF_typ;
-
-typedef struct ACP10CTRFB_typ {               /* Feedback Control */
-   UINT               mode;                   /* Mode */
-   UINT               reserve;                /* Reserved */
-   REAL               speed_mix_ratio;        /* Mixing ratio for speed */
-   REAL               speed_kv;               /* Proportional amplification for speed */
-} ACP10CTRFB_typ;
-
-typedef struct ACP10CTRMODM1_typ {            /* Mass1 */
-   REAL               inertia;                /* Mass moment of inertia */
-   REAL               viscous_friction;       /* Viscous friction */
-} ACP10CTRMODM1_typ;
-
-typedef struct ACP10CTRMODM2_typ {            /* Mass2 */
-   REAL               inertia;                /* Mass moment of inertia */
-   REAL               viscous_friction;       /* Viscous friction */
-   REAL               stiffness;              /* Stiffness of coupling */
-   REAL               damping;                /* Damping of coupling */
-} ACP10CTRMODM2_typ;
-
-typedef struct ACP10CTRMODEL_typ {            /* Model */
-   ACP10CTRMODM1_typ  mass1;                  /* Mass1 */
-   ACP10CTRMODM2_typ  mass2;                  /* Mass2 */
-} ACP10CTRMODEL_typ;
 
 typedef struct ACP10CTRL_typ {                /* Controller */
    USINT              init;                   /* Controller initialized */
@@ -318,8 +292,6 @@ typedef struct ACP10CTRL_typ {                /* Controller */
    ACP10CTRSP_typ     speed;                  /* Speed Controller */
    ACP10CTRUF_typ     uf;                     /* U/f Control */
    ACP10CTRFF_typ     ff;                     /* Feed Forward Control */
-   ACP10CTRFB_typ     fb;                     /* Feedback Control */
-   ACP10CTRMODEL_typ  model;                  /* Model */
 } ACP10CTRL_typ;
 
 typedef struct ACP10AXSTI_typ {               /* Index of Parameter Record */
@@ -610,27 +582,9 @@ typedef struct ACP10SUIR_typ {                /* ISQ-Ripple */
    ACP10SUIRP_typ     parameter;              /* Parameters */
 } ACP10SUIR_typ;
 
-typedef struct ACP10SUMOVST_typ {             /* Status */
-   UINT               mode;                   /* Mode */
-   USINT              ok;                     /* Operation complete */
-   USINT              error;                  /* Error */
-} ACP10SUMOVST_typ;
-
-typedef struct ACP10SUMOPA_typ {              /* Parameters */
-   UINT               mode;                   /* Mode */
-   USINT              start_dir;              /* Start direction */
-   USINT              fix_dir;                /* Fixed direction */
-   DINT               s_max;                  /* Maximum move distance */
-} ACP10SUMOPA_typ;
-
-typedef struct ACP10SUMOV_typ {               /* Movement */
-   ACP10SUMOVST_typ   status;                 /* Status */
-   ACP10SUMOPA_typ    parameter;              /* Parameters */
-} ACP10SUMOV_typ;
-
 typedef struct ACP10SETUP_typ {               /* Setup */
    USINT              status;                 /* Status */
-   USINT              active;                 /* Active */
+   USINT              reserve;                /* Reserved */
    UINT               detail;                 /* Detail */
    ACP10SUOBJ_typ     datobj;                 /* Data object */
    ACP10SUMA_typ      motor_induction;        /* Induction motor */
@@ -638,7 +592,6 @@ typedef struct ACP10SETUP_typ {               /* Setup */
    ACP10SUPH_typ      motor_phasing;          /* Motor phasing */
    ACP10SUCTR_typ     controller;             /* Controller */
    ACP10SUIR_typ      isq_ripple;             /* ISQ-Ripple */
-   ACP10SUMOV_typ     move;                   /* Movement */
 } ACP10SETUP_typ;
 
 typedef struct ACP10AXMOS_typ {               /* Status Bits */
@@ -1086,9 +1039,9 @@ typedef struct ACP10SAFEINDAT2_typ {          /* SafeMC: SafeIN data2 */
    USINT              SafetyActiveSDIpos;     /* SDIpos status bit */
    USINT              SafetyActiveSDIneg;     /* SDIneg status bit */
    USINT              SafetyActiveSLI;        /* SLI status bit */
-   USINT              SafetyStatusSBT;        /* SBT status bit */
    USINT              SafetyActiveSBT;        /* SBT is active */
-   USINT              SafetyActiveSLT;        /* SLT status bit */
+   USINT              SafetyStatusSBT;        /* SBT status bit */
+   USINT              reserved_stat_b21;      /* reserved_stat_b21 */
    USINT              StatusSFR;              /* At least one safety function is requested */
    USINT              AllReqFuncAct;          /* All requested safety functions are active */
    USINT              NotErrENC2;             /* Encoder error status bit2 */
@@ -1104,45 +1057,6 @@ typedef struct ACP10SAFEINDAT2_typ {          /* SafeMC: SafeIN data2 */
    UINT               reserve1;               /* Reserved */
    UDINT              reserve2;               /* Reserved */
 } ACP10SAFEINDAT2_typ;
-
-typedef struct ACP10SAFEINDAT3_typ {          /* SafeMC: SafeIN data3 */
-   USINT              NotErrFUNC;             /* Functional Fail Safe status bit */
-   USINT              Operational;            /* Function block is in state operational */
-   USINT              SafetyActiveSTO;        /* STO status bit */
-   USINT              SafetyActiveSBC;        /* SBC status bit */
-   USINT              SafetyActiveSS1;        /* SS1 status bit */
-   USINT              NotErrENC;              /* Encoder error status bit */
-   USINT              SafetyActiveSTO1;       /* STO1 status bit */
-   USINT              SafetyActiveSDC;        /* Deceleration monitoring status bit */
-   USINT              SafetyActiveSOS;        /* SOS status bit */
-   USINT              SafetyActiveSS2;        /* SS2 status bit */
-   USINT              SafetyActiveSLA;        /* SLA status bit */
-   USINT              SafetyActiveSLS1;       /* SLS1 status bit */
-   USINT              SafetyActiveSLS2;       /* SLS2 status bit */
-   USINT              reserved_stat_b13;      /* reserved_stat_b13 */
-   USINT              SafetyActiveSLS3;       /* SLS3 status bit */
-   USINT              SafetyActiveSLS4;       /* SLS4 status bit */
-   USINT              SafetyActiveSDIpos;     /* SDIpos status bit */
-   USINT              SafetyActiveSDIneg;     /* SDIneg status bit */
-   USINT              SafetyActiveSLI;        /* SLI status bit */
-   USINT              SafetyStatusSBT;        /* SBT status bit */
-   USINT              SafetyActiveSBT;        /* SBT is active */
-   USINT              SafetyActiveSLT;        /* SLT status bit */
-   USINT              StatusSFR;              /* At least one safety function is requested */
-   USINT              AllReqFuncAct;          /* All requested safety functions are active */
-   USINT              NotErrENC2;             /* Encoder error status bit2 */
-   USINT              SafePositionValid;      /* SafePosition is valid */
-   USINT              ReqHomingOK;            /* Request Homing OK bit */
-   USINT              SafetyActiveSLP;        /* SLP status bit */
-   USINT              SafetyActiveSMP;        /* SMP status bit */
-   USINT              SafeUserData1Active;    /* SafeUserData1 is active */
-   USINT              RSPValid;               /* RSP Valid bit */
-   USINT              StatusSetPosAlive;      /* Setposition is tested */
-   DINT               SafePosition;           /* Safe position */
-   DINT               SafeSpeed;              /* Safe speed (SafeUserData1, if activated) */
-   UDINT              reserve1;               /* Reserved */
-   UDINT              reserve2;               /* Reserved */
-} ACP10SAFEINDAT3_typ;
 
 typedef struct ACP10SAFEOUTDAT_typ {          /* SafeMC: SafeOUT data */
    USINT              RequestSTO;             /* STO control bit */
@@ -1193,7 +1107,7 @@ typedef struct ACP10SAFEOUTDAT2_typ {         /* SafeMC: SafeOUT data2 */
    USINT              RequestSLI;             /* SLI control bit */
    USINT              RequestSBT;             /* SBT control bit */
    USINT              reserved_ctrl_b20;      /* reserved_ctrl_b20 */
-   USINT              RequestSLT;             /* SLT control bit */
+   USINT              reserved_ctrl_b21;      /* reserved_ctrl_b21 */
    USINT              reserved_ctrl_b22;      /* reserved_ctrl_b22 */
    USINT              reserved_ctrl_b23;      /* reserved_ctrl_b23 */
    USINT              reserved_ctrl_b24;      /* reserved_ctrl_b24 */
@@ -1205,42 +1119,6 @@ typedef struct ACP10SAFEOUTDAT2_typ {         /* SafeMC: SafeOUT data2 */
    USINT              SwitchHomingMode;       /* Switch Homing Mode bit */
    USINT              reserved_ctrl_b31;      /* reserved_ctrl_b31 */
 } ACP10SAFEOUTDAT2_typ;
-
-typedef struct ACP10SAFEOUTDAT3_typ {         /* SafeMC: SafeOUT data3 */
-   USINT              Reset;                  /* Reset */
-   USINT              Activate;               /* Activation of SafeMC module */
-   USINT              RequestSTO;             /* STO control bit */
-   USINT              RequestSBC;             /* SBC control bit */
-   USINT              RequestSS1;             /* SS1 control bit */
-   USINT              reserved_ctrl_b5;       /* reserved_ctrl_b5 */
-   USINT              RequestSTO1;            /* STO1 control bit */
-   USINT              reserved_ctrl_b7;       /* reserved_ctrl_b7 */
-   USINT              RequestSOS;             /* SOS control bit */
-   USINT              RequestSS2;             /* SS2 control bit */
-   USINT              RequestSLA;             /* SLA control bit */
-   USINT              RequestSLS1;            /* SLS1 control bit */
-   USINT              RequestSLS2;            /* SLS2 control bit */
-   USINT              reserved_ctrl_b13;      /* reserved_ctrl_b13 */
-   USINT              RequestSLS3;            /* SLS3 control bit */
-   USINT              RequestSLS4;            /* SLS4 control bit */
-   USINT              RequestSDIpos;          /* SDI control bit (positive direction) */
-   USINT              RequestSDIneg;          /* SDI control bit (negative direction) */
-   USINT              RequestSLI;             /* SLI control bit */
-   USINT              RequestSBT;             /* SBT control bit */
-   USINT              reserved_ctrl_b20;      /* reserved_ctrl_b20 */
-   USINT              RequestSLT;             /* SLT control bit */
-   USINT              RequestSafeUserData1;   /* SafeUserData1 control bit */
-   USINT              reserved_ctrl_b23;      /* reserved_ctrl_b23 */
-   USINT              reserved_ctrl_b24;      /* reserved_ctrl_b24 */
-   USINT              RequestHoming;          /* Homing control bit */
-   USINT              RequestSwitch;          /* Switch control bit */
-   USINT              RequestSLP;             /* SLP control bit */
-   USINT              reserved_ctrl_b28;      /* reserved_ctrl_b28 */
-   USINT              reserved_ctrl_b29;      /* reserved_ctrl_b29 */
-   USINT              SwitchHomingMode;       /* Switch Homing Mode bit */
-   USINT              reserved_ctrl_b31;      /* reserved_ctrl_b31 */
-   UDINT              reserve1;               /* Reserved */
-} ACP10SAFEOUTDAT3_typ;
 
 typedef struct ACP10APNWCST_typ {             /* Status */
    USINT              ok;                     /* Operation complete */
@@ -1277,7 +1155,7 @@ typedef struct ACP10_HWICARD_typ {            /* Hardware Information for plug-i
 } ACP10_HWICARD_typ;
 
 typedef struct ACP10_HWIMOTOR_typ {           /* Hardware Information for motor */
-   USINT              model_number[36];       /* Model number */
+   USINT              model_number[20];       /* Model number */
    USINT              serial_number[20];      /* Serial number */
    USINT              revision[4];            /* Revision */
 } ACP10_HWIMOTOR_typ;
@@ -1300,10 +1178,8 @@ typedef struct ACP10TYPES_typ {               /* Data structure for additional d
    ACP10SMCCFG_typ      SafeMC_CFG;           /* SafeMC Configuration */
    ACP10SAFEINDAT_typ   SafeMC_SafeIN;        /* SafeMC SafeIN data structure */
    ACP10SAFEINDAT2_typ  SafeMC_SafeIN2;       /* SafeMC SafeIN2 data structure */
-   ACP10SAFEINDAT3_typ  SafeMC_SafeIN3;       /* SafeMC SafeIN3 data structure */
    ACP10SAFEOUTDAT_typ  SafeMC_SafeOUT;       /* SafeMC SafeOUT data structure */
    ACP10SAFEOUTDAT2_typ SafeMC_SafeOUT2;      /* SafeMC SafeOUT2 data structure */
-   ACP10SAFEOUTDAT3_typ SafeMC_SafeOUT3;      /* SafeMC SafeOUT3 data structure */
    ACP10APNWC_typ       acp_nw_coupling;      /* ACOPOS Network Coupling */
    USINT                NOT_USE_1[24];
    ACP10_HWINFO_typ     acp_hw_info;          /* ACOPOS hardware information */

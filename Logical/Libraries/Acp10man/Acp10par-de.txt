@@ -32,7 +32,7 @@
    36: Geber2: Serieller Status
    37: Geber3: Serieller Datenblock
    38: Geber3: Serieller Status
-   39: SafeMC: Geber-Maßstab: Bezugslänge
+   39: INTERNAL39
    40: Motor: Bestellbezeichnung
    41: Motor: Seriennummer
    42: Motor-Haltebremse: Nennstrom
@@ -183,7 +183,7 @@
   191: Basis-Bewegungen: Anhalten
   194: Kurvenautomat: Parameter rücksetzen
   195: VAX Kurvenautomat: Parameter rücksetzen
-  196: SafeMC: Istdrehzahl (SafeUserData1, wenn aktiviert)
+  196: INTERNAL196
   197: Bewegungsabbruch: Bremsrampe nach Antriebsfehler
   198: Zyklische Kommunikation: Zeit für Lebensüberwachung der Daten zum Antrieb
   200: INTERNAL200
@@ -209,7 +209,6 @@
   221: CTRL Strom: Statorspannung Hauptkomponente
   222: Flussregler: Stellgröße der Statorstromhauptkomponente
   223: CTRL Strom: Proportional-Verstärkung
-  224: SafeMC: Drehzahlgrenzwert
   225: CTRL Strom: Integrierzeitkonstante
   226: CTRL Drehzahl: Sperrfilter-Frequenz
   227: CTRL Drehzahl: Sperrfilter-Bandbreite
@@ -246,7 +245,7 @@
   259: CTRL Fluss: Proportional-Verstärkungsfaktor
   260: CTRL Fluss: Integrierzeitkonstante
   261: CTRL Zwischenkreis: Parameter-ID additiver Wirkstrom
-  262: Leistungsversorgung: Mode
+  262: Netzversorgung: Mode
   263: INTERNAL263
   264: INTERNAL264
   265: INTERNAL265
@@ -305,8 +304,8 @@
   326: INTERNAL326
   327: INTERNAL327
   328: CTRL Regler: Modus
-  330: Motorgeber: Getriebe: Geberumdrehungen
-  331: Motorgeber: Getriebe: Motorumdrehungen
+  330: INTERNAL330
+  331: INTERNAL331
   332: INTERNAL332
   333: INTERNAL333
   334: Motor: Einphasen: Kommando
@@ -746,7 +745,6 @@
   872: Motor: Bestromungsdrehsinn
   873: CTRL Zwischenkreis: Integrator-Nachstellzeit
   874: Motor: Einphasen: Zeit
-  875: Autotuning: Phasendurchtrittsfrequenz der Regelstrecke
   876: Bremswiderstand: Verlustleistung
   877: ISQ-Ripple Kompensation: Modus
   878: Parameter Identifikation: Geschwindigkeit
@@ -1113,7 +1111,7 @@
  1246: CTRL Drehzahl: Repetitive Control: Parameter 1
  1247: CTRL Drehzahl: Repetitive Control: Parameter 2
  1248: CTRL Drehzahl: Repetitive Control: Modus
- 1249: CTRL Vorsteuerung: Sollmotorkraft
+ 1249: INTERNAL1249
  1250: CTRL Flussschwächung: Spannungsgrenze Reserve
  1251: INTERNAL1251
  1252: INTERNAL1252
@@ -1127,8 +1125,8 @@
  1260: Motor-Haltebremse: Typ
  1261: Motor-Haltebremse: Widerstand
  1262: Motor-Haltebremse: Induktivität
- 1263: CTRL Vorsteuerung: Gesamtmasse
- 1264: CTRL Vorsteuerung: Externe Last
+ 1263: INTERNAL1263
+ 1264: INTERNAL1264
  1266: Motorhaltebremstest: Prüfdauer
  1267: INTERNAL1267
  1268: INTERNAL1268
@@ -1152,6 +1150,7 @@
  1287: INTERNAL1287
  1288: INTERNAL1288
  1289: INTERNAL1289
+ 1290: INTERNAL1290
  1291: INTERNAL1291
  1292: INTERNAL1292
  1293: CTRL Vektor: Parameter-ID des additiven Kommutierungswinkels
@@ -1192,7 +1191,6 @@
  1329: Virtueller Geber: Status
  1330: Virtueller Geber: Geber-Maßstab: Inkremente pro Motorumdrehung
  1331: INTERNAL1331
- 1332: Virtueller Geber: Filterzeitkonstante für Pos2 im ELC Betrieb
  1333: Geberloser Betrieb: Stillstandsüberwachung: Auslösezeit
  1334: Geberloser Betrieb: Überblendung
  1335: Geberloser Betrieb: Überblendzeit
@@ -1248,7 +1246,7 @@
  1385: INTERNAL1385
  1386: INTERNAL1386
  1387: INTERNAL1387
- 1388: PWM: Konfiguration
+ 1388: INTERNAL1388
  1389: CTRL Zwischenkreis: Sollwert Anstiegszeit
  1390: Geber1: Baudrate
  1391: Geber2: Baudrate
@@ -1268,9 +1266,9 @@
  1407: Geber2: Signalamplitude unterer Grenzwert
  1408: Geber3: Signalamplitude oberer Grenzwert
  1409: Geber3: Signalamplitude unterer Grenzwert
- 1410: CTRL Vorsteuerung: Geschwindigkeitskraftfaktor
- 1411: CTRL Vorsteuerung: Kraft in positiver Richtung
- 1412: CTRL Vorsteuerung: Kraft in negativer Richtung
+ 1410: INTERNAL1410
+ 1411: INTERNAL1411
+ 1412: INTERNAL1412
  1413: INTERNAL1413
  1414: Geber1: Kommando Referenzieren starten
  1415: Geber1: Status Referenzposition gültig
@@ -1354,7 +1352,7 @@
  1493: Simulationsmodus: Haftreibung2
  1494: Simulationsmodus: Viskose Reibung2
  1495: Simulationsmodus: Steifigkeit der Kopplung
- 1496: Simulationsmodus: Dämpfung der Kopplung
+ 1496: Simulationsmodus: Dämpfungsparameter der Kopplung
  1497: Simulationsmodus: Torsion der Kopplung
  1498: Simulationsmodus: Drehzahl von Masse 2
  1499: INTERNAL1499
@@ -1389,7 +1387,6 @@
  1532: Geber2: Maximale Geschwindikeit für serielle Position
  1533: Geber3: Maximale Geschwindikeit für serielle Position
  1534: INTERNAL1534
- 1535: INTERNAL1535
  1536: INTERNAL1536
  1537: INTERNAL1537
  1538: Leistungsteil: Temperatursensor 5: Temperatur
@@ -1410,8 +1407,8 @@
  1553: INTERNAL1553
  1554: INTERNAL1554
  1555: INTERNAL1555
- 1556: Geber1: Ausgangsspannung der Geberversorgung
- 1557: CTRL Zwischenkreis: Regler: Kommando
+ 1556: Geber1: Versorgungspannung
+ 1557: INTERNAL1557
  1558: Wechselrichter: Summenleistung
  1559: Wechselrichter: Dauersummenleistung: Grenzleistung
  1560: Wechselrichter: Spitzensummenleistung: Grenzleistung
@@ -1430,28 +1427,30 @@
  1573: Geber3: Geber-Maßstab: Strichzahl/Signalperioden pro Geberumdrehung
  1574: Adreßabbilder: Konfiguration für die Adresszuweisung
  1575: Adreßabbilder: Index der Adresse
- 1576: Geber2: Ausgangsspannung der Geberversorgung
+ 1576: Geber2: Versorgungspannung
  1577: INTERNAL1577
  1578: INTERNAL1578
  1579: INTERNAL1579
  1580: INTERNAL1580
  1582: INTERNAL1582
  1583: INTERNAL1583
- 1584: Geber2: Leitungswiderstand der Geberversorgung
- 1585: CTRL Modellbasiert: Proportional-Verstärkung für Drehzahl
- 1586: CTRL U/f: Momentbegrenzer: Integrator-Nachstellzeit
+ 1584: Geber2: Leitungswiderstand Geberversorgung
+ 1586: INTERNAL1586
  1587: INTERNAL1587
+ 1588: INTERNAL1588
+ 1589: INTERNAL1589
+ 1590: INTERNAL1590
+ 1591: INTERNAL1591
+ 1592: INTERNAL1592
  1593: Geber1: Positionsdifferenz pro Abtastung
  1594: Geber2: Positionsdifferenz pro Abtastung
  1595: CTRL Vorsteuerung: Reibmodell: Koeffizient C0
  1596: CTRL Vorsteuerung: Reibmodell: Koeffizient C1
  1597: CTRL Vorsteuerung: Reibmodell: Koeffizient C2
- 1598: Digitale Eingänge: Status Onboard Trigger1
- 1599: Digitale Eingänge: Status Onboard Trigger2
- 1600: CTRL Modellbasiert: Massenträgheitsmoment1
- 1601: CTRL Modellbasiert: Massenträgheitsmoment2
- 1602: CTRL Modellbasiert: Steifigkeit der Kopplung
- 1603: CTRL Modellbasiert: Dämpfung der Kopplung
+ 1600: INTERNAL1600
+ 1601: INTERNAL1601
+ 1602: INTERNAL1602
+ 1603: INTERNAL1603
  1604: INTERNAL1604
  1605: INTERNAL1605
  1606: INTERNAL1606
@@ -1465,51 +1464,15 @@
  1614: INTERNAL1614
  1615: INTERNAL1615
  1616: INTERNAL1616
- 1617: Lüftersteuerung: Modus
+ 1617: INTERNAL1617
  1618: Digitale Eingänge: Ruckzeit für Quickstop Bremsrampe
  1619: Simulationsmodus: Getriebeeingangsumdrehungen
  1620: Simulationsmodus: Getriebeausgangsumdrehungen
  1621: Simulationsmodus: Getrieberichtung
- 1622: Simulationsmodus: Parameter-ID des Gebers für Lastposition
- 1623: CTRL Chopper: Kommando
- 1624: CTRL Chopper: Modus
+ 1622: INTERNAL1622
+ 1623: INTERNAL1623
+ 1624: INTERNAL1624
  1625: INTERNAL1625
- 1626: CTRL Modellbasiert: Viskose Reibung1
- 1627: CTRL Modellbasiert: Viskose Reibung2
- 1628: CTRL Modellbasiert: Mischungsverhältnis für Drehzahl
- 1629: INTERNAL1629
- 1630: CTRL Modellbasiert: Modus für Rückführung
- 1631: INTERNAL1631
- 1632: INTERNAL1632
- 1633: INTERNAL1633
- 1634: INTERNAL1634
- 1635: Geber2: Ausgangsstufe
- 1636: Geber2: Maximal erwartete Ausgangsfrequenz
- 1637: Moment Strom Transformation: Modus
- 1638: INTERNAL1638
- 1639: INTERNAL1639
- 1640: INTERNAL1640
- 1641: Motor: Maximal zulässige Zwischenkreisspannung
- 1642: INTERNAL1642
- 1645: Geber2: Kompensation: Modus
- 1646: Geber2: Daten: Index
- 1647: Geber2: Daten: Parameter A0
- 1648: Geber2: Daten: Parameter A1
- 1649: Geber2: Daten: Parameter A2
- 1650: Geber2: ADC1: Offset
- 1651: Geber2: ADC2: Offset
- 1652: Geber2: ADC1: Verstärkung
- 1653: INTERNAL1653
- 1654: INTERNAL1654
- 1655: INTERNAL1655
- 1656: INTERNAL1656
- 1657: INTERNAL1657
- 1658: INTERNAL1658
- 1659: INTERNAL1659
- 1660: INTERNAL1660
- 1661: CTRL Lageregler: Index der Parameter-ID für zyklische Sollposition
- 1662: Geber1: Zeitüberschreitung für die Positionsschätzung
- 1663: Geber2: Zeitüberschreitung für die Positionsschätzung
  3072: FB LOGIC: Modus
  3080: FB LOGIC: Parameter-ID Eingang1
  3088: FB LOGIC: Parameter-ID Eingang2
@@ -1617,9 +1580,6 @@
  6032: FB DIO: Kommando Eingangskonfiguration setzen
  6040: FB DIO: Kommando Eingangskonfiguration löschen
  6048: FB DIO: Ausgangsrückführung
- 6056: FB DIO: Status
- 6064: FB DIO: Index des aktuellen Digital IOs
- 6072: FB DIO: Ereigniszählermodus
  6144: FB AIO: Kanal1: Analogwert
  6152: FB AIO: Kanal2: Analogwert
  6160: FB AIO: Kanal1: Komparator Schwellwert Pointer Parameter
@@ -1649,11 +1609,9 @@
  6352: FB AIO: Kommando Eingangskonfiguration löschen
  6360: FB AIO: Index des aktuellen Analog IOs
  6368: FB AIO: Parameter-ID Ausgang (Index)
- 6376: FB AIO: Ausgangsmodus (Index)
+ 6376: FB AIO: Ausgangsmodus
  6384: FB AIO: IO-Kommando
  6392: FB AIO: Überwachungen
- 6400: FB AIO: Eingang: Filter: Konfiguration (Index)
- 6408: FB AIO: Eingang: Filter: Maximaler Anstieg (Index)
  6656: FB CMP: Parameter-ID Eingang
  6664: FB CMP: Schwellwert
  6672: FB CMP: Fenster
@@ -1853,45 +1811,66 @@
 13056: FB BIT: Ergebniswert6
 13064: FB BIT: Ergebniswert7
 13072: FB BIT: Ergebniswert8
-13312: INTERNAL13312
-13320: INTERNAL13320
-13328: INTERNAL13328
-13336: INTERNAL13336
-13344: INTERNAL13344
-13352: INTERNAL13352
-13360: INTERNAL13360
-13368: INTERNAL13368
-13376: INTERNAL13376
-13384: INTERNAL13384
-13392: INTERNAL13392
-13400: INTERNAL13400
-13408: INTERNAL13408
-13416: INTERNAL13416
-13424: INTERNAL13424
-13432: INTERNAL13432
-13440: INTERNAL13440
-13448: INTERNAL13448
-13456: INTERNAL13456
-13464: INTERNAL13464
-13472: INTERNAL13472
-13480: INTERNAL13480
-13488: INTERNAL13488
-13496: INTERNAL13496
-13504: INTERNAL13504
-13512: INTERNAL13512
-13520: INTERNAL13520
-13528: INTERNAL13528
-13536: INTERNAL13536
-13544: INTERNAL13544
-13552: INTERNAL13552
-13560: INTERNAL13560
-13568: INTERNAL13568
-13576: INTERNAL13576
-13584: INTERNAL13584
-13592: INTERNAL13592
-13600: INTERNAL13600
-13608: INTERNAL13608
-13616: INTERNAL13616
+13312: FB CTRL: Kommando
+13320: FB CTRL: Modus
+13328: FB CTRL: Status
+13336: FB CTRL: Parameter-ID Eingang1
+13344: FB CTRL: Parameter-ID Eingang2
+13352: FB CTRL: Parameter-ID Eingang3
+13360: FB CTRL: Parameter Eingang1 UI1
+13368: FB CTRL: Parameter Eingang2 UI1
+13376: FB CTRL: Parameter Eingang1 R4
+13384: FB CTRL: Parameter Eingang2 R4
+13392: FB CTRL: Parameter Eingang3 R4
+13400: FB CTRL: Parameter Eingang4 R4
+13408: FB CTRL: Parameter Eingang5 R4
+13416: FB CTRL: Parameter Eingang6 R4
+13424: FB CTRL: Parameter Eingang7 R4
+13432: FB CTRL: Parameter Eingang8 R4
+13440: FB CTRL: Parameter Eingang9 R4
+13448: FB CTRL: Parameter Eingang10 R4
+13456: FB CTRL: Parameter Eingang11 R4
+13464: FB CTRL: Parameter Eingang12 R4
+13472: FB CTRL: Parameter Eingang13 R4
+13480: FB CTRL: Parameter Ausgang1 UI2
+13488: FB CTRL: Parameter Ausgang1 R4
+13496: FB CTRL: Parameter Ausgang2 R4
+13504: FB CTRL: Parameter Ausgang3 R4
+13512: FB CTRL: Parameter Ausgang4 R4
+13520: FB CTRL: Parameter Ausgang5 R4
+13528: FB CTRL: Parameter-ID Eingang4
+13536: FB CTRL: Parameter-ID Eingang5
+13544: FB CTRL: Parameter-ID Eingang6
+13552: FB CTRL: Parameter-ID Eingang7
+13560: FB CTRL: Parameter-ID Eingang8
+13568: FB CTRL: Parameter-ID Eingang9
+13576: FB CTRL: Parameter-ID Eingang10
+13584: FB CTRL: Parameter-ID Eingang11
+13592: FB CTRL: Parameter-ID Eingang12
+13600: FB CTRL: Parameter-ID Eingang13
+13608: FB CTRL: Parameter-ID Eingang14
+13616: FB CTRL: Parameter-ID Eingang15
+13624: FB CTRL: Parameter-ID Eingang16
+13632: FB CTRL: Parameter Eingang1 UI4
+13640: FB CTRL: Parameter Eingang2 UI4
+13648: FB CTRL: Parameter Ausgang6 R4
+13656: FB CTRL: Parameter Ausgang7 R4
+13664: FB CTRL: Parameter Ausgang8 R4
+13672: FB CTRL: Parameter Ausgang9 R4
+13680: FB CTRL: Parameter Ausgang10 R4
+13688: FB CTRL: Parameter Eingang14 R4
+13696: FB CTRL: Parameter Eingang15 R4
+13704: FB CTRL: Parameter Eingang16 R4
+13712: FB CTRL: Parameter Eingang17 R4
+13720: FB CTRL: Parameter Eingang3 UI4
+13728: FB CTRL: Parameter Eingang18 R4
+13736: FB CTRL: Parameter Eingang19 R4
+13744: FB CTRL: Parameter Eingang20 R4
+13752: FB CTRL: Parameter Eingang21 R4
+13760: FB CTRL: Parameter Eingang22 R4
+13768: FB CTRL: Parameter Eingang23 R4
+13776: FB CTRL: Parameter Eingang24 R4
+13784: FB CTRL: Parameter Eingang1 UI2
 13824: FB COUNT: Modus
 13832: FB COUNT: Parameter-ID Ereignis Eingang1
 13840: FB COUNT: Parameter-ID Ereignis Eingang2
@@ -1924,173 +1903,167 @@
 14480: FB DYNSYS: Systemzustand 4
 14488: FB DYNSYS: Systemzustand 5
 14496: FB DYNSYS: Zustand
-14848: FB FILTER: Modus
-14856: FB FILTER: Koeffizient A0
-14864: FB FILTER: Koeffizient A1
-14872: FB FILTER: Koeffizient B0
-14880: FB FILTER: Koeffizient B1
-14888: FB FILTER: Koeffizient B2
-14896: FB FILTER: Parameter-ID Eingang
-14904: FB FILTER: Parameter-ID Koeffizient C
-14912: FB FILTER: Ergebniswert I4
-14920: FB FILTER: Ergebniswert I4 Nachkommateil
-14928: FB FILTER: Ergebniswert R4
-63488: Parameter Identifikation: Zusatzinformation zu initialen Shuttleposition
+63488: INTERNAL63488
 63489: INTERNAL63489
-63490: Parameter Identifikation: Qualität der initialen Shuttleposition
-63491: Zwischenkreis: Gefilterte Mittenspannung
-63492: Zwischenkreis: Mittenspannung
-63493: Parameter Identifikation: Initiale Shuttleposition
-63494: Parameter Identifikation: Index der initialen Shuttleposition
-63495: Intersegmentkommunikation: Status
-63496: Intersegmentkommunikation: Fehlertoleranz
+63490: INTERNAL63490
+63491: INTERNAL63491
+63492: INTERNAL63492
+63493: INTERNAL63493
+63494: INTERNAL63494
+63495: INTERNAL63495
+63496: INTERNAL63496
 63497: INTERNAL63497
 63498: INTERNAL63498
 63499: INTERNAL63499
 63500: INTERNAL63500
-63501: CTRL Strom: Istphasenstrom der Phase 1
-63502: CTRL Strom: Istphasenstrom der Phase 2
-63503: CTRL Strom: Istphasenstrom der Phase 3
-63504: CTRL Strom: Istphasenstrom der Phase 4
-63505: CTRL Strom: Istphasenstrom der Phase 5
-63506: CTRL Strom: Istphasenstrom der Phase 6
-63507: CTRL Strom: Istphasenstrom der Phase 7
-63508: CTRL Strom: Istphasenstrom der Phase 8
-63509: CTRL Strom: Istphasenstrom der Phase 9
-63510: CTRL Strom: Istphasenstrom der Phase 10
-63511: CTRL Strom: Istphasenstrom der Phase 11
-63512: CTRL Strom: Istphasenstrom der Phase 12
-63513: CTRL Strom: Istphasenstrom der Phase 13
-63514: CTRL Strom: Istphasenstrom der Phase 14
-63515: CTRL Strom: Istphasenstrom der Phase 15
-63516: CTRL Strom: Istphasenstrom der Phase 16
-63517: CTRL Strom: Istphasenstrom der Phase 17
-63518: CTRL Strom: Istphasenstrom der Phase 18
-63519: CTRL Strom: Istphasenstrom der Phase 19
-63520: CTRL Strom: Istphasenstrom der Phase 20
-63521: CTRL Strom: Istphasenstrom der Phase 21
-63522: CTRL Strom: Istphasenstrom der Phase 22
-63523: CTRL Strom: Istphasenstrom der Phase 23
-63524: CTRL Strom: Istphasenstrom der Phase 24
-63525: CTRL Strom: Istphasenstrom der Phase 25
-63526: CTRL Strom: Istphasenstrom der Phase 26
-63527: CTRL Strom: Istphasenstrom der Phase 27
-63528: CTRL Strom: Istphasenstrom der Phase 28
-63529: CTRL Strom: Istphasenstrom der Phase 29
-63530: CTRL Strom: Istphasenstrom der Phase 30
-63531: CTRL Strom: Istphasenstrom der Phase 31
-63532: CTRL Strom: Istphasenstrom der Phase 32
-63533: CTRL Strom: Istphasenstrom der Phase 33
-63534: CTRL Strom: Istphasenstrom der Phase 34
-63535: CTRL Strom: Istphasenstrom der Phase 35
-63536: CTRL Strom: Istphasenstrom der Phase 36
-63537: CTRL Strom: Istphasenstrom der Phase 37
-63538: CTRL Strom: Istphasenstrom der Phase 38
-63539: CTRL Strom: Istphasenstrom der Phase 39
-63540: CTRL Strom: Istphasenstrom der Phase 40
-63541: CTRL Strom: Istphasenstrom der Phase 41
-63542: CTRL Strom: Istphasenstrom der Phase 42
-63543: CTRL Strom: Istphasenstrom der Phase 43
-63544: CTRL Strom: Istphasenstrom der Phase 44
+63501: INTERNAL63501
+63502: INTERNAL63502
+63503: INTERNAL63503
+63504: INTERNAL63504
+63505: INTERNAL63505
+63506: INTERNAL63506
+63507: INTERNAL63507
+63508: INTERNAL63508
+63509: INTERNAL63509
+63510: INTERNAL63510
+63511: INTERNAL63511
+63512: INTERNAL63512
+63513: INTERNAL63513
+63514: INTERNAL63514
+63515: INTERNAL63515
+63516: INTERNAL63516
+63517: INTERNAL63517
+63518: INTERNAL63518
+63519: INTERNAL63519
+63520: INTERNAL63520
+63521: INTERNAL63521
+63522: INTERNAL63522
+63523: INTERNAL63523
+63524: INTERNAL63524
+63525: INTERNAL63525
+63526: INTERNAL63526
+63527: INTERNAL63527
+63528: INTERNAL63528
+63529: INTERNAL63529
+63530: INTERNAL63530
+63531: INTERNAL63531
+63532: INTERNAL63532
+63533: INTERNAL63533
+63534: INTERNAL63534
+63535: INTERNAL63535
+63536: INTERNAL63536
+63537: INTERNAL63537
+63538: INTERNAL63538
+63539: INTERNAL63539
+63540: INTERNAL63540
+63541: INTERNAL63541
+63542: INTERNAL63542
+63543: INTERNAL63543
+63544: INTERNAL63544
+63545: INTERNAL63545
+63546: INTERNAL63546
+63547: INTERNAL63547
+63548: INTERNAL63548
+63549: INTERNAL63549
 63550: INTERNAL63550
-63551: CTRL Strom: Sollphasenstrom der Phase 1
-63552: CTRL Strom: Sollphasenstrom der Phase 2
-63553: CTRL Strom: Sollphasenstrom der Phase 3
-63554: CTRL Strom: Sollphasenstrom der Phase 4
-63555: CTRL Strom: Sollphasenstrom der Phase 5
-63556: CTRL Strom: Sollphasenstrom der Phase 6
-63557: CTRL Strom: Sollphasenstrom der Phase 7
-63558: CTRL Strom: Sollphasenstrom der Phase 8
-63559: CTRL Strom: Sollphasenstrom der Phase 9
-63560: CTRL Strom: Sollphasenstrom der Phase 10
-63561: CTRL Strom: Sollphasenstrom der Phase 11
-63562: CTRL Strom: Sollphasenstrom der Phase 12
-63563: CTRL Strom: Sollphasenstrom der Phase 13
-63564: CTRL Strom: Sollphasenstrom der Phase 14
-63565: CTRL Strom: Sollphasenstrom der Phase 15
-63566: CTRL Strom: Sollphasenstrom der Phase 16
-63567: CTRL Strom: Sollphasenstrom der Phase 17
-63568: CTRL Strom: Sollphasenstrom der Phase 18
-63569: CTRL Strom: Sollphasenstrom der Phase 19
-63570: CTRL Strom: Sollphasenstrom der Phase 20
-63571: CTRL Strom: Sollphasenstrom der Phase 21
-63572: CTRL Strom: Sollphasenstrom der Phase 22
-63573: CTRL Strom: Sollphasenstrom der Phase 23
-63574: CTRL Strom: Sollphasenstrom der Phase 24
-63575: CTRL Strom: Sollphasenstrom der Phase 25
-63576: CTRL Strom: Sollphasenstrom der Phase 26
-63577: CTRL Strom: Sollphasenstrom der Phase 27
-63578: CTRL Strom: Sollphasenstrom der Phase 28
-63579: CTRL Strom: Sollphasenstrom der Phase 29
-63580: CTRL Strom: Sollphasenstrom der Phase 30
-63581: CTRL Strom: Sollphasenstrom der Phase 31
-63582: CTRL Strom: Sollphasenstrom der Phase 32
-63583: CTRL Strom: Sollphasenstrom der Phase 33
-63584: CTRL Strom: Sollphasenstrom der Phase 34
-63585: CTRL Strom: Sollphasenstrom der Phase 35
-63586: CTRL Strom: Sollphasenstrom der Phase 36
-63587: CTRL Strom: Sollphasenstrom der Phase 37
-63588: CTRL Strom: Sollphasenstrom der Phase 38
-63589: CTRL Strom: Sollphasenstrom der Phase 39
-63590: CTRL Strom: Sollphasenstrom der Phase 40
-63591: CTRL Strom: Sollphasenstrom der Phase 41
-63592: CTRL Strom: Sollphasenstrom der Phase 42
-63593: CTRL Strom: Sollphasenstrom der Phase 43
-63594: CTRL Strom: Sollphasenstrom der Phase 44
+63551: INTERNAL63551
+63552: INTERNAL63552
+63553: INTERNAL63553
+63554: INTERNAL63554
+63555: INTERNAL63555
+63556: INTERNAL63556
+63557: INTERNAL63557
+63558: INTERNAL63558
+63559: INTERNAL63559
+63560: INTERNAL63560
+63561: INTERNAL63561
+63562: INTERNAL63562
+63563: INTERNAL63563
+63564: INTERNAL63564
+63565: INTERNAL63565
+63566: INTERNAL63566
+63567: INTERNAL63567
+63568: INTERNAL63568
+63569: INTERNAL63569
+63570: INTERNAL63570
+63571: INTERNAL63571
+63572: INTERNAL63572
+63573: INTERNAL63573
+63574: INTERNAL63574
+63575: INTERNAL63575
+63576: INTERNAL63576
+63577: INTERNAL63577
+63578: INTERNAL63578
+63579: INTERNAL63579
+63580: INTERNAL63580
+63581: INTERNAL63581
+63582: INTERNAL63582
+63583: INTERNAL63583
+63584: INTERNAL63584
+63585: INTERNAL63585
+63586: INTERNAL63586
+63587: INTERNAL63587
+63588: INTERNAL63588
+63589: INTERNAL63589
+63590: INTERNAL63590
+63591: INTERNAL63591
+63592: INTERNAL63592
+63593: INTERNAL63593
+63594: INTERNAL63594
 63595: INTERNAL63595
 63596: INTERNAL63596
 63597: INTERNAL63597
 63598: INTERNAL63598
 63599: INTERNAL63599
 63600: INTERNAL63600
-63601: CTRL Strom: Sollphasenspannung der Phase 1
-63602: CTRL Strom: Sollphasenspannung der Phase 2
-63603: CTRL Strom: Sollphasenspannung der Phase 3
-63604: CTRL Strom: Sollphasenspannung der Phase 4
-63605: CTRL Strom: Sollphasenspannung der Phase 5
-63606: CTRL Strom: Sollphasenspannung der Phase 6
-63607: CTRL Strom: Sollphasenspannung der Phase 7
-63608: CTRL Strom: Sollphasenspannung der Phase 8
-63609: CTRL Strom: Sollphasenspannung der Phase 9
-63610: CTRL Strom: Sollphasenspannung der Phase 10
-63611: CTRL Strom: Sollphasenspannung der Phase 11
-63612: CTRL Strom: Sollphasenspannung der Phase 12
-63613: CTRL Strom: Sollphasenspannung der Phase 13
-63614: CTRL Strom: Sollphasenspannung der Phase 14
-63615: CTRL Strom: Sollphasenspannung der Phase 15
-63616: CTRL Strom: Sollphasenspannung der Phase 16
-63617: CTRL Strom: Sollphasenspannung der Phase 17
-63618: CTRL Strom: Sollphasenspannung der Phase 18
-63619: CTRL Strom: Sollphasenspannung der Phase 19
-63620: CTRL Strom: Sollphasenspannung der Phase 20
-63621: CTRL Strom: Sollphasenspannung der Phase 21
-63622: CTRL Strom: Sollphasenspannung der Phase 22
-63623: CTRL Strom: Sollphasenspannung der Phase 23
-63624: CTRL Strom: Sollphasenspannung der Phase 24
-63625: CTRL Strom: Sollphasenspannung der Phase 25
-63626: CTRL Strom: Sollphasenspannung der Phase 26
-63627: CTRL Strom: Sollphasenspannung der Phase 27
-63628: CTRL Strom: Sollphasenspannung der Phase 28
-63629: CTRL Strom: Sollphasenspannung der Phase 29
-63630: CTRL Strom: Sollphasenspannung der Phase 30
-63631: CTRL Strom: Sollphasenspannung der Phase 31
-63632: CTRL Strom: Sollphasenspannung der Phase 32
-63633: CTRL Strom: Sollphasenspannung der Phase 33
-63634: CTRL Strom: Sollphasenspannung der Phase 34
-63635: CTRL Strom: Sollphasenspannung der Phase 35
-63636: CTRL Strom: Sollphasenspannung der Phase 36
-63637: CTRL Strom: Sollphasenspannung der Phase 37
-63638: CTRL Strom: Sollphasenspannung der Phase 38
-63639: CTRL Strom: Sollphasenspannung der Phase 39
-63640: CTRL Strom: Sollphasenspannung der Phase 40
-63641: CTRL Strom: Sollphasenspannung der Phase 41
-63642: CTRL Strom: Sollphasenspannung der Phase 42
-63643: CTRL Strom: Sollphasenspannung der Phase 43
-63644: CTRL Strom: Sollphasenspannung der Phase 44
-63645: Temperatursensor: Temperatur 3
-63646: Temperatursensor: Temperatur 4
-63647: Temperatursensor: LST Luft
-63648: Temperatursensor: LST Balancer
+63601: INTERNAL63601
+63602: INTERNAL63602
+63603: INTERNAL63603
+63604: INTERNAL63604
+63605: INTERNAL63605
+63606: INTERNAL63606
+63607: INTERNAL63607
+63608: INTERNAL63608
+63609: INTERNAL63609
+63610: INTERNAL63610
+63611: INTERNAL63611
+63612: INTERNAL63612
+63613: INTERNAL63613
+63614: INTERNAL63614
+63615: INTERNAL63615
+63616: INTERNAL63616
+63617: INTERNAL63617
+63618: INTERNAL63618
+63619: INTERNAL63619
+63620: INTERNAL63620
+63621: INTERNAL63621
+63622: INTERNAL63622
+63623: INTERNAL63623
+63624: INTERNAL63624
+63625: INTERNAL63625
+63626: INTERNAL63626
+63627: INTERNAL63627
+63628: INTERNAL63628
+63629: INTERNAL63629
+63630: INTERNAL63630
+63631: INTERNAL63631
+63632: INTERNAL63632
+63633: INTERNAL63633
+63634: INTERNAL63634
+63635: INTERNAL63635
+63636: INTERNAL63636
+63637: INTERNAL63637
+63638: INTERNAL63638
+63639: INTERNAL63639
+63640: INTERNAL63640
+63641: INTERNAL63641
+63642: INTERNAL63642
+63643: INTERNAL63643
+63644: INTERNAL63644
+63645: INTERNAL63645
+63646: INTERNAL63646
+63647: INTERNAL63647
+63648: INTERNAL63648
 63649: INTERNAL63649
 63650: INTERNAL63650
 63651: INTERNAL63651
@@ -2100,41 +2073,10 @@
 63655: INTERNAL63655
 63656: INTERNAL63656
 63657: INTERNAL63657
-63658: INTERNAL63658
 63660: INTERNAL63660
-63661: INTERNAL63661
 63663: INTERNAL63663
 63664: INTERNAL63664
-63665: CTRL Geschwindigkeit: Sollgeschwindigkeit des Shuttles
-63666: CTRL Geschwindigkeit: Istgeschwindigkeit des Shuttles
-63667: CTRL Geschwindigkeit: Proportional-Verstärkung
-63668: CTRL Geschwindigkeit: Integrator-Nachstellzeit
-63669: CTRL Geschwindigkeit: Summe der Sollgeschwindigkeiten
-63670: CTRL Geschwindigkeit: Geschwindigkeitsfehler
-63671: CTRL Geschwindigkeit: Sollwert der Vortriebskraft
 63672: INTERNAL63672
-63673: Temperatursensor: Temperatur 5
-63674: Temperatursensor: Temperatur 6
-63675: Temperatursensor: Temperatur 7
-63676: Temperatursensor: Temperatur 8
-63677: Temperatursensor: Temperatur 9
-63678: Temperatursensor: Temperatur 10
-63679: Temperatursensor: Temperatur 11
-63680: Motor: Temperatursensor: MUX Index (0-basiert)
-63681: Motor: Temperatursensor: MUX Temperatur 
-63682: CTRL Fluss: Betrag der Stellgröße des Weichenauslösestromes
-63683: INTERNAL63683
-63684: INTERNAL63684
-63685: INTERNAL63685
-63686: INTERNAL63686
-63687: INTERNAL63687
-63688: INTERNAL63688
-63689: INTERNAL63689
-63690: Motor: Temperaturmodell: Temperatur
-63691: Motor: Temperaturmodell: Abbruchgrenze
-63692: Motor: Temperaturmodell: Warngrenze
-63693: Motor: Temperaturmodell: Spulenindex (0-basiert)
-63694: Motor: Temperaturmodell: Temperatur Spule
 63711: INTERNAL63711
 63712: INTERNAL63712
 63713: INTERNAL63713
@@ -2217,51 +2159,17 @@
 63790: INTERNAL63790
 63791: INTERNAL63791
 63792: INTERNAL63792
-63793: INTERNAL63793
-63794: INTERNAL63794
-63795: INTERNAL63795
-63796: INTERNAL63796
-63797: INTERNAL63797
-63798: INTERNAL63798
-63799: INTERNAL63799
 63800: INTERNAL63800
-63801: INTERNAL63801
-63802: INTERNAL63802
-63803: INTERNAL63803
-63804: INTERNAL63804
-63805: INTERNAL63805
-63806: CTRL Strom: Summe der Istphasenströme
-63807: INTERNAL63807
-63808: INTERNAL63808
-63809: INTERNAL63809
-63813: INTERNAL63813
-63814: INTERNAL63814
-63815: INTERNAL63815
-63816: INTERNAL63816
-63817: INTERNAL63817
-63818: INTERNAL63818
-63819: INTERNAL63819
-63820: INTERNAL63820
-63821: INTERNAL63821
-63822: INTERNAL63822
-63879: CTRL Regler: Konfiguration: Index eines Parametersatzes
-63880: CTRL Position: Istposition des Shuttles auf Segment
+63879: INTERNAL63879
+63880: INTERNAL63880
 63881: INTERNAL63881
-63882: CTRL Regler: Zyklische Sollposition des Shuttles
-63883: CTRL Position: Sollposition des Shuttles auf dem Segment
-63884: CTRL Position: Netzwerk: Zykluszeit der Sollwerte
-63885: CTRL Regler: Zyklische Kanal Status-Bits
-63886: CTRL Regler: Zyklische Segment Steuer-Bits
-63887: CTRL Regler: Zyklische Kanal Steuer-Bits
-63888: CTRL Regler: Zyklische Segment Status-Bits
-63889: INTERNAL63889
-63890: INTERNAL63890
-63891: INTERNAL63891
-63892: INTERNAL63892
-63893: INTERNAL63893
-63894: INTERNAL63894
-63895: INTERNAL63895
-63896: INTERNAL63896
+63882: INTERNAL63882
+63883: INTERNAL63883
+63884: INTERNAL63884
+63885: INTERNAL63885
+63886: INTERNAL63886
+63887: INTERNAL63887
+63888: INTERNAL63888
 64201: Antriebsanpassung: Geschwindigkeit bei maximalem Ausgangswert
 64225: Geber1: Wertebereich der Geberposition
 64232: Schrittmotor: Schrittauflösung: Schritte pro Motorumdrehung

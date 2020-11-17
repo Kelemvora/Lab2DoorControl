@@ -32,7 +32,7 @@
    36: Encoder2: Serial status
    37: Encoder3: Serial data block
    38: Encoder3: Serial status
-   39: SafeMC: Encoder scaling: reference length
+   39: INTERNAL39
    40: Motor: Order text
    41: Motor: Serial number
    42: Motor holding brake: Rated current
@@ -183,7 +183,7 @@
   191: Basis movements: Halt
   194: Cam automat: Reset parameter
   195: VAX Cam automat: Reset parameter
-  196: SafeMC: Actual speed (SafeUserData1, if activated)
+  196: INTERNAL196
   197: Movement stop: Deceleration ramp after drive error
   198: Cyclic communication: Time for life sign monitoring of data to drive
   200: INTERNAL200
@@ -209,12 +209,11 @@
   221: CTRL Current controller: Stator voltage direct component
   222: Flux controller: Manipulated variable
   223: CTRL Current controller: Proportional amplification factor
-  224: SafeMC: Speed limit
   225: CTRL Current controller: Integral action time
   226: CTRL Speed controller: Notchfilter frequence
   227: CTRL Speed controller: Notchfilter bandwidth
-  228: CTRL Two encoder control: Position difference
-  229: CTRL Two encoder control: Position difference limit for stop of a movement
+  228: CTRL Two encoder control: Positions difference
+  229: CTRL Two encoder control: Positions difference limit for stop of a movement
   230: CTRL Position controller: Actual encoder position parameter ID
   231: CTRL Position controller: Parameter ID enable input
   232: Cyclic communication: Parameter index of data to drive
@@ -305,8 +304,8 @@
   326: INTERNAL326
   327: INTERNAL327
   328: CTRL Controller: Mode
-  330: Motor encoder: Gear: Encoder revolutions
-  331: Motor encoder: Gear: Motor revolutions
+  330: INTERNAL330
+  331: INTERNAL331
   332: INTERNAL332
   333: INTERNAL333
   334: Motor: Phasing: Command
@@ -547,10 +546,10 @@
   658: Motor: Dataset index
   659: Encoder1: ADC2 value
   660: Simulation mode: Model
-  661: Simulation mode: Mass moment of inertia1
+  661: Simulation mode: Mass inertia1
   662: Simulation mode: Static friction1
   663: Simulation mode: Viscous friction1
-  664: Simulation mode: Parameter for additive load
+  664: Simulation mode:: Parameter for additive load
   665: Encoder1: INC Reference pulse interval error
   666: Encoder2: INC Reference pulse interval error
   667: Encoder3: INC Reference pulse interval error
@@ -746,7 +745,6 @@
   872: Motor: Rotational direction of current
   873: CTRL DC bus: Integral action time
   874: Motor: Phasing: Time
-  875: Autotuning: Phase crossover frequency of the plant
   876: Bleeder: Power loss
   877: ISQ-Ripple compensation: Mode
   878: Parameter identification: Speed
@@ -1113,7 +1111,7 @@
  1246: CTRL Speed: Repetitive Control: Parameter 1
  1247: CTRL Speed: Repetitive Control: Parameter 2
  1248: CTRL Speed: Repetitive Control: Mode
- 1249: CTRL Feed forward: Set motor force
+ 1249: INTERNAL1249
  1250: CTRL Flux weakening: Voltage limit reserve
  1251: INTERNAL1251
  1252: INTERNAL1252
@@ -1127,8 +1125,8 @@
  1260: Motor holding brake: Type
  1261: Motor holding brake: Resistance
  1262: Motor holding brake: Inductance
- 1263: CTRL Feed forward: Total mass
- 1264: CTRL Feed forward: External load
+ 1263: INTERNAL1263
+ 1264: INTERNAL1264
  1266: Motor holding brake test: Test duration
  1267: INTERNAL1267
  1268: INTERNAL1268
@@ -1152,6 +1150,7 @@
  1287: INTERNAL1287
  1288: INTERNAL1288
  1289: INTERNAL1289
+ 1290: INTERNAL1290
  1291: INTERNAL1291
  1292: INTERNAL1292
  1293: CTRL Vector controller: Parameter ID of the additive commutation angle
@@ -1192,7 +1191,6 @@
  1329: Virtual Encoder: Status
  1330: Virtual Encoder: Encoder scaling: increments per motor revolution
  1331: INTERNAL1331
- 1332: Virtual Encoder: Filter time constant for Pos2 in ELC mode
  1333: Encoderless control: Stop monitoring: Triggering time
  1334: Encoderless control: Transition
  1335: Encoderless control: Transition time  
@@ -1248,7 +1246,7 @@
  1385: INTERNAL1385
  1386: INTERNAL1386
  1387: INTERNAL1387
- 1388: PWM: Configuration
+ 1388: INTERNAL1388
  1389: CTRL DC bus: Set value rise time
  1390: Encoder1: Baud rate
  1391: Encoder2: Baud rate
@@ -1268,9 +1266,9 @@
  1407: Encoder2: Signal amplitude lower limit
  1408: Encoder3: Signal amplitude upper limit
  1409: Encoder3: Signal amplitude lower limit
- 1410: CTRL Feed forward: Speed force factor
- 1411: CTRL Feed forward: Force in positive direction
- 1412: CTRL Feed forward: Force in negative direction
+ 1410: INTERNAL1410
+ 1411: INTERNAL1411
+ 1412: INTERNAL1412
  1413: INTERNAL1413
  1414: Encoder1: Command start homing procedure
  1415: Encoder1: Status home position valid
@@ -1350,11 +1348,11 @@
  1489: Motor: Speed-dependent power loss: Linear coefficient
  1490: Motor: Speed-dependent power loss: Quadratic coefficient
  1491: CTRL DC bus: Pre-charge: Enable voltage
- 1492: Simulation mode: Mass moment of inertia2
+ 1492: Simulation mode: Mass inertia2
  1493: Simulation mode: Static friction2
  1494: Simulation mode: Viscous friction2
  1495: Simulation mode: Stiffness of coupling
- 1496: Simulation mode: Damping of coupling
+ 1496: Simulation mode: Damping parameter of coupling
  1497: Simulation mode: Torsion of coupling
  1498: Simulation mode: Speed of mass 2
  1499: INTERNAL1499
@@ -1389,7 +1387,6 @@
  1532: Encoder2: Maximum speed vor serial position
  1533: Encoder3: Maximum speed vor serial position
  1534: INTERNAL1534
- 1535: INTERNAL1535
  1536: INTERNAL1536
  1537: INTERNAL1537
  1538: Power stage: Temperature sensor 5: Temperature
@@ -1410,8 +1407,8 @@
  1553: INTERNAL1553
  1554: INTERNAL1554
  1555: INTERNAL1555
- 1556: Encoder1: Output voltage of the sensor supply
- 1557: CTRL DC bus: Controller: Command
+ 1556: Encoder1: Supply voltage
+ 1557: INTERNAL1557
  1558: Inverter: Total power
  1559: Inverter: Continuous total power: Limit power
  1560: Inverter: Peak total power: Limit power
@@ -1430,28 +1427,30 @@
  1573: Encoder3: Encoder scaling: Lines/signal periods per encoder revolution
  1574: Address mapper: Configuration for address assignment
  1575: Address mapper: Index of address
- 1576: Encoder2: Output voltage of the encoder supply
+ 1576: Encoder2: Supply voltage
  1577: INTERNAL1577
  1578: INTERNAL1578
  1579: INTERNAL1579
  1580: INTERNAL1580
  1582: INTERNAL1582
  1583: INTERNAL1583
- 1584: Encoder2: Line resistance of the encoder supply
- 1585: CTRL Model based: Proportional amplification for speed
- 1586: CTRL U/f: Torque limiter: Integral action time
+ 1584: Encoder2: Line resistance encoder power supply
+ 1586: INTERNAL1586
  1587: INTERNAL1587
+ 1588: INTERNAL1588
+ 1589: INTERNAL1589
+ 1590: INTERNAL1590
+ 1591: INTERNAL1591
+ 1592: INTERNAL1592
  1593: Encoder1: Position difference per sample
  1594: Encoder2: Position difference per sample
  1595: CTRL Feed forward: Friction model: Coefficient C0
  1596: CTRL Feed forward: Friction model: Coefficient C1
  1597: CTRL Feed forward: Friction model: Coefficient C2
- 1598: Digital inputs: Status onboard trigger1
- 1599: Digital inputs: Status onboard trigger2
- 1600: CTRL Model based: Mass moment of inertia1
- 1601: CTRL Model based: Mass moment of inertia2
- 1602: CTRL Model based: Stiffness of coupling
- 1603: CTRL Model based: Damping of coupling
+ 1600: INTERNAL1600
+ 1601: INTERNAL1601
+ 1602: INTERNAL1602
+ 1603: INTERNAL1603
  1604: INTERNAL1604
  1605: INTERNAL1605
  1606: INTERNAL1606
@@ -1465,51 +1464,15 @@
  1614: INTERNAL1614
  1615: INTERNAL1615
  1616: INTERNAL1616
- 1617: Fan control: Mode
+ 1617: INTERNAL1617
  1618: Digital inputs: Jolt time for quickstop deceleration ramp
  1619: Simulation mode: Gearbox input revolutions
  1620: Simulation mode: Gearbox output revolutions
  1621: Simulation mode: Gearbox direction
- 1622: Simulation mode: Parameter ID for the encoder of load position
- 1623: CTRL Chopper: Command
- 1624: CTRL Chopper: Mode
+ 1622: INTERNAL1622
+ 1623: INTERNAL1623
+ 1624: INTERNAL1624
  1625: INTERNAL1625
- 1626: CTRL Model based: Viscous friction1
- 1627: CTRL Model based: Viscous friction2
- 1628: CTRL Model based: Mixing ratio for speed
- 1629: INTERNAL1629
- 1630: CTRL Model based: Feedback mode
- 1631: INTERNAL1631
- 1632: INTERNAL1632
- 1633: INTERNAL1633
- 1634: INTERNAL1634
- 1635: Encoder2: Output stage
- 1636: Encoder2: Maximal expected output frequency
- 1637: Torque Current Transformation: Mode
- 1638: INTERNAL1638
- 1639: INTERNAL1639
- 1640: INTERNAL1640
- 1641: Motor: Maximum permissible DC bus voltage
- 1642: INTERNAL1642
- 1645: Encoder2: Compensation: Mode
- 1646: Encoder2: Data: Index
- 1647: Encoder2: Data: Parameter A0
- 1648: Encoder2: Data: Parameter A1
- 1649: Encoder2: Data: Parameter A2
- 1650: Encoder2: ADC1: Offset
- 1651: Encoder2: ADC2: Offset
- 1652: Encoder2: ADC1: Gain
- 1653: INTERNAL1653
- 1654: INTERNAL1654
- 1655: INTERNAL1655
- 1656: INTERNAL1656
- 1657: INTERNAL1657
- 1658: INTERNAL1658
- 1659: INTERNAL1659
- 1660: INTERNAL1660
- 1661: CTRL Position controller: Index of parameter ID for cyclic set position
- 1662: Encoder1: Timeout for position estimation
- 1663: Encoder2: Timeout for position estimation
  3072: FB LOGIC: Mode
  3080: FB LOGIC: Parameter ID of input1
  3088: FB LOGIC: Parameter ID of input2
@@ -1617,9 +1580,6 @@
  6032: FB DIO: Command set input configuration
  6040: FB DIO: Command clear input configuration
  6048: FB DIO: output feedback
- 6056: FB DIO: State
- 6064: FB DIO: Index of the current digital IO
- 6072: FB DIO: Event counter mode
  6144: FB AIO: channel 1: Analog value
  6152: FB AIO: channel 2: Analog value
  6160: FB AIO: channel 1: Comparator threshold pointer parameter
@@ -1649,11 +1609,9 @@
  6352: FB AIO: Command clear input configuration
  6360: FB AIO: Index of the current analog IO
  6368: FB AIO: parameter ID of output (Index)
- 6376: FB AIO: output mode (Index)
- 6384: FB AIO: IO-Command
+ 6376: FB AIO: output mode
+ 6384: FB AIO: IO-Kommando
  6392: FB AIO: Checks
- 6400: FB AIO: Input: Filter: Configuration (Index)
- 6408: FB AIO: Input: Filter: Maximal Slew Rate (Index)
  6656: FB CMP: parameter ID of input
  6664: FB CMP: threshold
  6672: FB CMP: window
@@ -1853,45 +1811,66 @@
 13056: FB BIT: Result value6
 13064: FB BIT: Result value7
 13072: FB BIT: Result value8
-13312: INTERNAL13312
-13320: INTERNAL13320
-13328: INTERNAL13328
-13336: INTERNAL13336
-13344: INTERNAL13344
-13352: INTERNAL13352
-13360: INTERNAL13360
-13368: INTERNAL13368
-13376: INTERNAL13376
-13384: INTERNAL13384
-13392: INTERNAL13392
-13400: INTERNAL13400
-13408: INTERNAL13408
-13416: INTERNAL13416
-13424: INTERNAL13424
-13432: INTERNAL13432
-13440: INTERNAL13440
-13448: INTERNAL13448
-13456: INTERNAL13456
-13464: INTERNAL13464
-13472: INTERNAL13472
-13480: INTERNAL13480
-13488: INTERNAL13488
-13496: INTERNAL13496
-13504: INTERNAL13504
-13512: INTERNAL13512
-13520: INTERNAL13520
-13528: INTERNAL13528
-13536: INTERNAL13536
-13544: INTERNAL13544
-13552: INTERNAL13552
-13560: INTERNAL13560
-13568: INTERNAL13568
-13576: INTERNAL13576
-13584: INTERNAL13584
-13592: INTERNAL13592
-13600: INTERNAL13600
-13608: INTERNAL13608
-13616: INTERNAL13616
+13312: FB CTRL: Command
+13320: FB CTRL: Mode
+13328: FB CTRL: State
+13336: FB CTRL: Parameter ID input1
+13344: FB CTRL: Parameter ID input2
+13352: FB CTRL: Parameter ID input3
+13360: FB CTRL: Parameter input1 UI1
+13368: FB CTRL: Parameter input2 UI1
+13376: FB CTRL: Parameter input1 R4
+13384: FB CTRL: Parameter input2 R4
+13392: FB CTRL: Parameter input3 R4
+13400: FB CTRL: Parameter input4 R4
+13408: FB CTRL: Parameter input5 R4
+13416: FB CTRL: Parameter input6 R4
+13424: FB CTRL: Parameter input7 R4
+13432: FB CTRL: Parameter input8 R4
+13440: FB CTRL: Parameter input9 R4
+13448: FB CTRL: Parameter input10 R4
+13456: FB CTRL: Parameter input11 R4
+13464: FB CTRL: Parameter input12 R4
+13472: FB CTRL: Parameter input13 R4
+13480: FB CTRL: Parameter output1 UI2
+13488: FB CTRL: Parameter output1 R4
+13496: FB CTRL: Parameter output2 R4
+13504: FB CTRL: Parameter output3 R4
+13512: FB CTRL: Parameter output4 R4
+13520: FB CTRL: Parameter output5 R4
+13528: FB CTRL: Parameter ID input4
+13536: FB CTRL: Parameter ID input5
+13544: FB CTRL: Parameter ID input6
+13552: FB CTRL: Parameter ID input7
+13560: FB CTRL: Parameter ID input8
+13568: FB CTRL: Parameter ID input9
+13576: FB CTRL: Parameter ID input10
+13584: FB CTRL: Parameter ID input11
+13592: FB CTRL: Parameter ID input12
+13600: FB CTRL: Parameter ID input13
+13608: FB CTRL: Parameter ID input14
+13616: FB CTRL: Parameter ID input15
+13624: FB CTRL: Parameter ID input16
+13632: FB CTRL: Parameter input1 UI4
+13640: FB CTRL: Parameter input2 UI4
+13648: FB CTRL: Parameter output6 R4
+13656: FB CTRL: Parameter output7 R4
+13664: FB CTRL: Parameter output8 R4
+13672: FB CTRL: Parameter output9 R4
+13680: FB CTRL: Parameter output10 R4
+13688: FB CTRL: Parameter input14 R4
+13696: FB CTRL: Parameter input15 R4
+13704: FB CTRL: Parameter input16 R4
+13712: FB CTRL: Parameter input17 R4
+13720: FB CTRL: Parameter input3 UI4
+13728: FB CTRL: Parameter input18 R4
+13736: FB CTRL: Parameter input19 R4
+13744: FB CTRL: Parameter input20 R4
+13752: FB CTRL: Parameter input21 R4
+13760: FB CTRL: Parameter input22 R4
+13768: FB CTRL: Parameter input23 R4
+13776: FB CTRL: Parameter input24 R4
+13784: FB CTRL: Parameter input1 UI2
 13824: FB COUNT: Mode
 13832: FB COUNT: Parameter ID of event input1
 13840: FB COUNT: Parameter ID of event input2
@@ -1924,173 +1903,167 @@
 14480: FB DYNSYS: System state 4
 14488: FB DYNSYS: System state 5
 14496: FB DYNSYS: Status
-14848: FB FILTER: Mode
-14856: FB FILTER: Coefficient A0
-14864: FB FILTER: Coefficient A1
-14872: FB FILTER: Coefficient B0
-14880: FB FILTER: Coefficient B1
-14888: FB FILTER: Coefficient B2
-14896: FB FILTER: Parameter ID of input
-14904: FB FILTER: Parameter ID of coefficient C
-14912: FB FILTER: Result value I4
-14920: FB FILTER: Result value I4 fractional part
-14928: FB FILTER: Result value R4
-63488: Parameter identification: Additional information of initial shuttle position
+63488: INTERNAL63488
 63489: INTERNAL63489
-63490: Parameter identification: Quality of the initial shuttle position
-63491: DC-Bus: Filtered middle voltage
-63492: DC-Bus: Middle voltage
-63493: Parameter identification: Initial shuttle position
-63494: Parameter identification: Index of the initial shuttle position
-63495: Inter-segment communication: State
-63496: Inter-segment communication: Fault tolerance
+63490: INTERNAL63490
+63491: INTERNAL63491
+63492: INTERNAL63492
+63493: INTERNAL63493
+63494: INTERNAL63494
+63495: INTERNAL63495
+63496: INTERNAL63496
 63497: INTERNAL63497
 63498: INTERNAL63498
 63499: INTERNAL63499
 63500: INTERNAL63500
-63501: CTRL Current controller: Actual phase current of phase 1
-63502: CTRL Current controller: Actual phase current of phase 2
-63503: CTRL Current controller: Actual phase current of phase 3
-63504: CTRL Current controller: Actual phase current of phase 4
-63505: CTRL Current controller: Actual phase current of phase 5
-63506: CTRL Current controller: Actual phase current of phase 6
-63507: CTRL Current controller: Actual phase current of phase 7
-63508: CTRL Current controller: Actual phase current of phase 8
-63509: CTRL Current controller: Actual phase current of phase 9
-63510: CTRL Current controller: Actual phase current of phase 10
-63511: CTRL Current controller: Actual phase current of phase 11
-63512: CTRL Current controller: Actual phase current of phase 12
-63513: CTRL Current controller: Actual phase current of phase 13
-63514: CTRL Current controller: Actual phase current of phase 14
-63515: CTRL Current controller: Actual phase current of phase 15
-63516: CTRL Current controller: Actual phase current of phase 16
-63517: CTRL Current controller: Actual phase current of phase 17
-63518: CTRL Current controller: Actual phase current of phase 18
-63519: CTRL Current controller: Actual phase current of phase 19
-63520: CTRL Current controller: Actual phase current of phase 20
-63521: CTRL Current controller: Actual phase current of phase 21
-63522: CTRL Current controller: Actual phase current of phase 22
-63523: CTRL Current controller: Actual phase current of phase 23
-63524: CTRL Current controller: Actual phase current of phase 24
-63525: CTRL Current controller: Actual phase current of phase 25
-63526: CTRL Current controller: Actual phase current of phase 26
-63527: CTRL Current controller: Actual phase current of phase 27
-63528: CTRL Current controller: Actual phase current of phase 28
-63529: CTRL Current controller: Actual phase current of phase 29
-63530: CTRL Current controller: Actual phase current of phase 30
-63531: CTRL Current controller: Actual phase current of phase 31
-63532: CTRL Current controller: Actual phase current of phase 32
-63533: CTRL Current controller: Actual phase current of phase 33
-63534: CTRL Current controller: Actual phase current of phase 34
-63535: CTRL Current controller: Actual phase current of phase 35
-63536: CTRL Current controller: Actual phase current of phase 36
-63537: CTRL Current controller: Actual phase current of phase 37
-63538: CTRL Current controller: Actual phase current of phase 38
-63539: CTRL Current controller: Actual phase current of phase 39
-63540: CTRL Current controller: Actual phase current of phase 40
-63541: CTRL Current controller: Actual phase current of phase 41
-63542: CTRL Current controller: Actual phase current of phase 42
-63543: CTRL Current controller: Actual phase current of phase 43
-63544: CTRL Current controller: Actual phase current of phase 44
+63501: INTERNAL63501
+63502: INTERNAL63502
+63503: INTERNAL63503
+63504: INTERNAL63504
+63505: INTERNAL63505
+63506: INTERNAL63506
+63507: INTERNAL63507
+63508: INTERNAL63508
+63509: INTERNAL63509
+63510: INTERNAL63510
+63511: INTERNAL63511
+63512: INTERNAL63512
+63513: INTERNAL63513
+63514: INTERNAL63514
+63515: INTERNAL63515
+63516: INTERNAL63516
+63517: INTERNAL63517
+63518: INTERNAL63518
+63519: INTERNAL63519
+63520: INTERNAL63520
+63521: INTERNAL63521
+63522: INTERNAL63522
+63523: INTERNAL63523
+63524: INTERNAL63524
+63525: INTERNAL63525
+63526: INTERNAL63526
+63527: INTERNAL63527
+63528: INTERNAL63528
+63529: INTERNAL63529
+63530: INTERNAL63530
+63531: INTERNAL63531
+63532: INTERNAL63532
+63533: INTERNAL63533
+63534: INTERNAL63534
+63535: INTERNAL63535
+63536: INTERNAL63536
+63537: INTERNAL63537
+63538: INTERNAL63538
+63539: INTERNAL63539
+63540: INTERNAL63540
+63541: INTERNAL63541
+63542: INTERNAL63542
+63543: INTERNAL63543
+63544: INTERNAL63544
+63545: INTERNAL63545
+63546: INTERNAL63546
+63547: INTERNAL63547
+63548: INTERNAL63548
+63549: INTERNAL63549
 63550: INTERNAL63550
-63551: CTRL Current controller: Set phase current of phase 1
-63552: CTRL Current controller: Set phase current of phase 2
-63553: CTRL Current controller: Set phase current of phase 3
-63554: CTRL Current controller: Set phase current of phase 4
-63555: CTRL Current controller: Set phase current of phase 5
-63556: CTRL Current controller: Set phase current of phase 6
-63557: CTRL Current controller: Set phase current of phase 7
-63558: CTRL Current controller: Set phase current of phase 8
-63559: CTRL Current controller: Set phase current of phase 9
-63560: CTRL Current controller: Set phase current of phase 10
-63561: CTRL Current controller: Set phase current of phase 11
-63562: CTRL Current controller: Set phase current of phase 12
-63563: CTRL Current controller: Set phase current of phase 13
-63564: CTRL Current controller: Set phase current of phase 14
-63565: CTRL Current controller: Set phase current of phase 15
-63566: CTRL Current controller: Set phase current of phase 16
-63567: CTRL Current controller: Set phase current of phase 17
-63568: CTRL Current controller: Set phase current of phase 18
-63569: CTRL Current controller: Set phase current of phase 19
-63570: CTRL Current controller: Set phase current of phase 20
-63571: CTRL Current controller: Set phase current of phase 21
-63572: CTRL Current controller: Set phase current of phase 22
-63573: CTRL Current controller: Set phase current of phase 23
-63574: CTRL Current controller: Set phase current of phase 24
-63575: CTRL Current controller: Set phase current of phase 25
-63576: CTRL Current controller: Set phase current of phase 26
-63577: CTRL Current controller: Set phase current of phase 27
-63578: CTRL Current controller: Set phase current of phase 28
-63579: CTRL Current controller: Set phase current of phase 29
-63580: CTRL Current controller: Set phase current of phase 30
-63581: CTRL Current controller: Set phase current of phase 31
-63582: CTRL Current controller: Set phase current of phase 32
-63583: CTRL Current controller: Set phase current of phase 33
-63584: CTRL Current controller: Set phase current of phase 34
-63585: CTRL Current controller: Set phase current of phase 35
-63586: CTRL Current controller: Set phase current of phase 36
-63587: CTRL Current controller: Set phase current of phase 37
-63588: CTRL Current controller: Set phase current of phase 38
-63589: CTRL Current controller: Set phase current of phase 39
-63590: CTRL Current controller: Set phase current of phase 40
-63591: CTRL Current controller: Set phase current of phase 41
-63592: CTRL Current controller: Set phase current of phase 42
-63593: CTRL Current controller: Set phase current of phase 43
-63594: CTRL Current controller: Set phase current of phase 44
+63551: INTERNAL63551
+63552: INTERNAL63552
+63553: INTERNAL63553
+63554: INTERNAL63554
+63555: INTERNAL63555
+63556: INTERNAL63556
+63557: INTERNAL63557
+63558: INTERNAL63558
+63559: INTERNAL63559
+63560: INTERNAL63560
+63561: INTERNAL63561
+63562: INTERNAL63562
+63563: INTERNAL63563
+63564: INTERNAL63564
+63565: INTERNAL63565
+63566: INTERNAL63566
+63567: INTERNAL63567
+63568: INTERNAL63568
+63569: INTERNAL63569
+63570: INTERNAL63570
+63571: INTERNAL63571
+63572: INTERNAL63572
+63573: INTERNAL63573
+63574: INTERNAL63574
+63575: INTERNAL63575
+63576: INTERNAL63576
+63577: INTERNAL63577
+63578: INTERNAL63578
+63579: INTERNAL63579
+63580: INTERNAL63580
+63581: INTERNAL63581
+63582: INTERNAL63582
+63583: INTERNAL63583
+63584: INTERNAL63584
+63585: INTERNAL63585
+63586: INTERNAL63586
+63587: INTERNAL63587
+63588: INTERNAL63588
+63589: INTERNAL63589
+63590: INTERNAL63590
+63591: INTERNAL63591
+63592: INTERNAL63592
+63593: INTERNAL63593
+63594: INTERNAL63594
 63595: INTERNAL63595
 63596: INTERNAL63596
 63597: INTERNAL63597
 63598: INTERNAL63598
 63599: INTERNAL63599
 63600: INTERNAL63600
-63601: CTRL Current controller: Set phase voltage of phase 1
-63602: CTRL Current controller: Set phase voltage of phase 2
-63603: CTRL Current controller: Set phase voltage of phase 3
-63604: CTRL Current controller: Set phase voltage of phase 4
-63605: CTRL Current controller: Set phase voltage of phase 5
-63606: CTRL Current controller: Set phase voltage of phase 6
-63607: CTRL Current controller: Set phase voltage of phase 7
-63608: CTRL Current controller: Set phase voltage of phase 8
-63609: CTRL Current controller: Set phase voltage of phase 9
-63610: CTRL Current controller: Set phase voltage of phase 10
-63611: CTRL Current controller: Set phase voltage of phase 11
-63612: CTRL Current controller: Set phase voltage of phase 12
-63613: CTRL Current controller: Set phase voltage of phase 13
-63614: CTRL Current controller: Set phase voltage of phase 14
-63615: CTRL Current controller: Set phase voltage of phase 15
-63616: CTRL Current controller: Set phase voltage of phase 16
-63617: CTRL Current controller: Set phase voltage of phase 17
-63618: CTRL Current controller: Set phase voltage of phase 18
-63619: CTRL Current controller: Set phase voltage of phase 19
-63620: CTRL Current controller: Set phase voltage of phase 20
-63621: CTRL Current controller: Set phase voltage of phase 21
-63622: CTRL Current controller: Set phase voltage of phase 22
-63623: CTRL Current controller: Set phase voltage of phase 23
-63624: CTRL Current controller: Set phase voltage of phase 24
-63625: CTRL Current controller: Set phase voltage of phase 25
-63626: CTRL Current controller: Set phase voltage of phase 26
-63627: CTRL Current controller: Set phase voltage of phase 27
-63628: CTRL Current controller: Set phase voltage of phase 28
-63629: CTRL Current controller: Set phase voltage of phase 29
-63630: CTRL Current controller: Set phase voltage of phase 30
-63631: CTRL Current controller: Set phase voltage of phase 31
-63632: CTRL Current controller: Set phase voltage of phase 32
-63633: CTRL Current controller: Set phase voltage of phase 33
-63634: CTRL Current controller: Set phase voltage of phase 34
-63635: CTRL Current controller: Set phase voltage of phase 35
-63636: CTRL Current controller: Set phase voltage of phase 36
-63637: CTRL Current controller: Set phase voltage of phase 37
-63638: CTRL Current controller: Set phase voltage of phase 38
-63639: CTRL Current controller: Set phase voltage of phase 39
-63640: CTRL Current controller: Set phase voltage of phase 40
-63641: CTRL Current controller: Set phase voltage of phase 41
-63642: CTRL Current controller: Set phase voltage of phase 42
-63643: CTRL Current controller: Set phase voltage of phase 43
-63644: CTRL Current controller: Set phase voltage of phase 44
-63645: Temperature sensor: Temperature 3
-63646: Temperature sensor: Temperature 4
-63647: Temperature sensor: Powerstage air
-63648: Temperature sensor: Powerstage balancer
+63601: INTERNAL63601
+63602: INTERNAL63602
+63603: INTERNAL63603
+63604: INTERNAL63604
+63605: INTERNAL63605
+63606: INTERNAL63606
+63607: INTERNAL63607
+63608: INTERNAL63608
+63609: INTERNAL63609
+63610: INTERNAL63610
+63611: INTERNAL63611
+63612: INTERNAL63612
+63613: INTERNAL63613
+63614: INTERNAL63614
+63615: INTERNAL63615
+63616: INTERNAL63616
+63617: INTERNAL63617
+63618: INTERNAL63618
+63619: INTERNAL63619
+63620: INTERNAL63620
+63621: INTERNAL63621
+63622: INTERNAL63622
+63623: INTERNAL63623
+63624: INTERNAL63624
+63625: INTERNAL63625
+63626: INTERNAL63626
+63627: INTERNAL63627
+63628: INTERNAL63628
+63629: INTERNAL63629
+63630: INTERNAL63630
+63631: INTERNAL63631
+63632: INTERNAL63632
+63633: INTERNAL63633
+63634: INTERNAL63634
+63635: INTERNAL63635
+63636: INTERNAL63636
+63637: INTERNAL63637
+63638: INTERNAL63638
+63639: INTERNAL63639
+63640: INTERNAL63640
+63641: INTERNAL63641
+63642: INTERNAL63642
+63643: INTERNAL63643
+63644: INTERNAL63644
+63645: INTERNAL63645
+63646: INTERNAL63646
+63647: INTERNAL63647
+63648: INTERNAL63648
 63649: INTERNAL63649
 63650: INTERNAL63650
 63651: INTERNAL63651
@@ -2100,41 +2073,10 @@
 63655: INTERNAL63655
 63656: INTERNAL63656
 63657: INTERNAL63657
-63658: INTERNAL63658
 63660: INTERNAL63660
-63661: INTERNAL63661
 63663: INTERNAL63663
 63664: INTERNAL63664
-63665: CTRL Speed controller: Shuttle set speed
-63666: CTRL Speed controller: Shuttle actual speed
-63667: CTRL Speed controller: Proportional amplification
-63668: CTRL Speed controller: Integral action time
-63669: CTRL Speed controller: Sum of the set speeds
-63670: CTRL Speed controller: Speed error
-63671: CTRL Speed controller: Reference value of thrust force
 63672: INTERNAL63672
-63673: Temperature sensor: Temperature 5
-63674: Temperature sensor: Temperature 6
-63675: Temperature sensor: Temperature 7
-63676: Temperature sensor: Temperature 8
-63677: Temperature sensor: Temperature 9
-63678: Temperature sensor: Temperature 10
-63679: Temperature sensor: Temperature 11
-63680: Motor: Temperature sensor: MUX-index (0-based)
-63681: Motor: Temperature sensor: MUX temperature
-63682: CTRL Flux controller: Reference value of switch release current
-63683: INTERNAL63683
-63684: INTERNAL63684
-63685: INTERNAL63685
-63686: INTERNAL63686
-63687: INTERNAL63687
-63688: INTERNAL63688
-63689: INTERNAL63689
-63690: Motor: Temperature model: Temperature
-63691: Motor: Temperature model: Stop limit
-63692: Motor: Temperature model: warning limit
-63693: Motor: Temperature model: Coil index (0-based)
-63694: Motor: Temperature model: Coil temperature
 63711: INTERNAL63711
 63712: INTERNAL63712
 63713: INTERNAL63713
@@ -2217,51 +2159,17 @@
 63790: INTERNAL63790
 63791: INTERNAL63791
 63792: INTERNAL63792
-63793: INTERNAL63793
-63794: INTERNAL63794
-63795: INTERNAL63795
-63796: INTERNAL63796
-63797: INTERNAL63797
-63798: INTERNAL63798
-63799: INTERNAL63799
 63800: INTERNAL63800
-63801: INTERNAL63801
-63802: INTERNAL63802
-63803: INTERNAL63803
-63804: INTERNAL63804
-63805: INTERNAL63805
-63806: CTRL Current controller: Sum of actual phase currents
-63807: INTERNAL63807
-63808: INTERNAL63808
-63809: INTERNAL63809
-63813: INTERNAL63813
-63814: INTERNAL63814
-63815: INTERNAL63815
-63816: INTERNAL63816
-63817: INTERNAL63817
-63818: INTERNAL63818
-63819: INTERNAL63819
-63820: INTERNAL63820
-63821: INTERNAL63821
-63822: INTERNAL63822
-63879: CTRL Controller: Configuration: Index of parameter record
-63880: CTRL Position controller: Actual position of shuttle on segment
+63879: INTERNAL63879
+63880: INTERNAL63880
 63881: INTERNAL63881
-63882: CTRL Controller: Cyclic set position of the shuttle 
-63883: CTRL Position controller: Set position of shuttle on segment
-63884: CTRL Position controller: Network: Cycle time of set values
-63885: CTRL Controller: Cyclic channel status bits
-63886: CTRL Controller: Cyclic segment control bits
-63887: CTRL Controller: Cyclic channel control bits
-63888: CTRL Controller: Cyclic segment status bits
-63889: INTERNAL63889
-63890: INTERNAL63890
-63891: INTERNAL63891
-63892: INTERNAL63892
-63893: INTERNAL63893
-63894: INTERNAL63894
-63895: INTERNAL63895
-63896: INTERNAL63896
+63882: INTERNAL63882
+63883: INTERNAL63883
+63884: INTERNAL63884
+63885: INTERNAL63885
+63886: INTERNAL63886
+63887: INTERNAL63887
+63888: INTERNAL63888
 64201: Servo drive adjustment: Velocity at maximum output value
 64225: Encoder1: Range of encoder position
 64232: Stepper motor: Step scaling: Steps per motor revolution
